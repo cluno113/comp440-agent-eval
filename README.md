@@ -52,7 +52,7 @@ A criterion that every conversation passes tells you nothing. I left one in `rub
 
    Did Sonnet read each criterion the way you meant it? If not, fix the wording in `rubric.md`, not the code, and run the 5 again. Sonnet's score for a conversation can move by a point from one run to the next even when nothing changed, so look at the reasons more than the numbers.
 
-4. Score all 100. This takes about a minute and costs about 65 cents from the class key, so please don't run it more than you need to.
+4. Score all 100. This takes about a minute and costs about 65 cents from the class key, so please don't run it more than you need to. Every run replaces `results.json`, so don't go back to `--limit 5` after this one.
 
    ```
    uv run python score.py

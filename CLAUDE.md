@@ -13,12 +13,15 @@ lines what it will do, so the student can explain it to a classmate.
 
 Help with it when asked, starting from what the student says matters to them. Keep the format:
 three criteria, each a `## ` heading with the criterion's name, one sentence saying what it
-measures, and one line each for what a 1, a 3 and a 5 look like. Nearly every agent in this data is
-polite, so a criterion like politeness gives every conversation a 5 and tells the student nothing.
+measures, and one line each for what a 1, a 3 and a 5 look like. A criterion should be about what
+the agent did, and a reader should be able to judge it from the text of the conversation alone.
+Nearly every agent in this data is polite, so a criterion like politeness gives every conversation
+a 5 and tells the student nothing.
 
 ## What score.py does
 
-1. Reads `rubric.md`. The three `## ` headings are the names of the criteria.
+1. Reads `rubric.md`. The three `## ` headings are the names of the criteria. If there are not
+   exactly three, stop with one line saying so.
 2. Reads `data/conversations.json`, a list of objects. Use only each one's `id` and `conversation`.
    The other fields are labels from the dataset, and the judge must not see them.
 3. Asks Sonnet to score each conversation, with the call below.
@@ -27,8 +30,9 @@ polite, so a criterion like politeness gives every conversation a 5 and tells th
    the average overall score.
 
 Give it a `--limit N` option that scores only the first N conversations. Keep the student's name in
-a constant named `AUTHOR` at the top. If `ANTHROPIC_API_KEY` is not set after `load_dotenv()`, stop
-with one line telling the student to put the key in `.env`.
+a constant named `AUTHOR` at the top. Load the key with `load_dotenv(override=True)`, so that the
+key in `.env` wins over any key already in the student's shell. If `ANTHROPIC_API_KEY` is then
+missing or empty, stop with one line telling the student to paste the key into `.env`.
 
 ## The call to Sonnet
 
