@@ -6,15 +6,15 @@ You have 45 minutes, and Claude writes all the code. Work on your own laptop for
 
 ## Part 0: Setup (5 minutes)
 
-1. Get the repository and install its two packages:
+1. Fork this repository on GitHub, so that you have your own copy to push to: open <https://github.com/shilad/comp440-agent-eval/fork> and click "Create fork". Then clone your fork and install its two packages, replacing YOUR-USERNAME with your GitHub username:
 
    ```
-   git clone https://github.com/shilad/comp440-agent-eval
+   git clone https://github.com/YOUR-USERNAME/comp440-agent-eval
    cd comp440-agent-eval
    uv sync
    ```
 
-2. Run `cp .env.example .env`, open `.env`, and paste the key I give you in class after `ANTHROPIC_API_KEY=`. Please don't `export` the key in your terminal instead, because Claude Code may then start using it for its own work.
+2. Run `cp .env.example .env`, open `.env`, and paste the key I emailed you after `ANTHROPIC_API_KEY=`. Please don't `export` the key in your terminal instead, because Claude Code may then start using it for its own work.
 
 3. Open `data/examples.md` and read at least two of the conversations. Each one is between a customer and a support agent at a made-up store called BrownBox.
 
@@ -52,7 +52,7 @@ A criterion that every conversation passes tells you nothing. I left one in `rub
 
    Did Sonnet read each criterion the way you meant it? If not, fix the wording in `rubric.md`, not the code, and run the 5 again. Sonnet's score for a conversation can move by a point from one run to the next even when nothing changed, so look at the reasons more than the numbers.
 
-4. Score all 100. This takes about a minute and costs about 65 cents from the class key, so please don't run it more than you need to. Every run replaces `results.json`, so don't go back to `--limit 5` after this one.
+4. Score all 100. This takes about a minute and costs about 65 cents on your key, so please don't run it more than you need to. Every run replaces `results.json`, so don't go back to `--limit 5` after this one.
 
    ```
    uv run python score.py
@@ -68,20 +68,27 @@ Your neighbor scored the same 100 conversations with a different rubric. Your cr
 
 2. In `viewer.html`, choose your file as Results A and your neighbor's as Results B. The list now shows both sets of scores and the gap between the two overall scores, with the largest gaps first.
 
-3. Open the three conversations at the top of the list and read them together.
+3. Open the three conversations at the top of the list and read them together. For each one: do your rubrics measure different things, or did Sonnet read one criterion in a way its author didn't intend? If BrownBox had to pick one of your two rubrics to decide which agents get more training, which should it pick, and why?
 
-For each one: do your rubrics measure different things, or did Sonnet read one criterion in a way its author didn't intend? If BrownBox had to pick one of your two rubrics to decide which agents get more training, which should it pick, and why?
+4. Fill in `comparison.md`: your neighbor's name, the average gap between your two judges (the "Gap" column of the "Average" row), and two or three sentences on why your judges disagreed about the conversation with the largest gap.
 
 ## Part 4: Submit (5 minutes)
 
-Before you leave class, open the [course form](https://forms.gle/mgKcnqzTGxNaGvteA), choose "Activity submission", and paste these into the text box:
+Do this before you leave class, even if you didn't finish Part 3. At a minimum, I want your rubric in your repository.
 
-1. The words "Agent evaluation activity" and your neighbor's name.
-2. Your `rubric.md`.
-3. Your average overall score and the average gap between you and your neighbor. Both are in the "Average" row of the list.
-4. Two or three sentences on why your judges disagreed about the conversation with the largest gap.
+1. Commit your work and push it to your fork:
 
-You don't need to push your code anywhere.
+   ```
+   git add -A
+   git commit -m "Agent evaluation activity"
+   git push
+   ```
+
+   This commits `rubric.md`, `score.py`, `results.json` and `comparison.md`. Git ignores `.env`, so your key stays on your laptop.
+
+2. Open your fork on GitHub and check that `rubric.md` shows your three criteria.
+
+3. Open the [course form](https://forms.gle/mgKcnqzTGxNaGvteA), choose "Activity submission", and paste the words "Agent evaluation activity" and the address of your fork, which looks like `https://github.com/YOUR-USERNAME/comp440-agent-eval`.
 
 ## If you finish early
 
@@ -121,7 +128,9 @@ Everybody's script writes the same format, which is what lets the viewer compare
 
 **The viewer says my file doesn't match the results format.** Copy the list of problems, paste it to Claude, and ask it to fix `score.py`.
 
-**I get a rate limit error (429).** The whole class shares one key. Wait a minute and run it again. If it keeps happening, tell me.
+**I get a rate limit error (429).** Wait a minute and run it again. If it keeps happening, tell me.
+
+**Will my key end up on GitHub?** No. It is in `.env`, which git ignores.
 
 ## About the data
 

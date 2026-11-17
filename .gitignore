@@ -2,6 +2,5 @@
 .env
 .venv/
 __pycache__/
-# Your own result files, and any classmate's you save here.
-results.json
+# A classmate's result file, or an earlier run of your own. Your results.json is committed.
 results-*.json

@@ -69,7 +69,8 @@ scores = response.parsed_output            # scores.criterion_1.reason, scores.c
 
 - Keep `INSTRUCTIONS` word for word. Every student's script uses the same text, so that two
   students' results differ only because of their rubrics.
-- Run five requests at a time with `ThreadPoolExecutor(max_workers=5)`. The class shares one key.
+- Run five requests at a time with `ThreadPoolExecutor(max_workers=5)`, which keeps the student's
+  key under its rate limit.
 - If a call fails for any reason, print one line saying which conversation was skipped and carry on.
 
 ## The format of results.json
@@ -108,5 +109,11 @@ should read the judge's reasons on the first five before paying for 100.
 
 ## The key
 
-The key is in `.env`, which git ignores. Never print it, never `export` it, and never copy it into
-another file. Do not suggest committing or pushing this repository.
+The student's own key is in `.env`, which git ignores. Never print it, never `export` it, and never
+copy it into another file.
+
+## Committing
+
+This folder is the student's fork. At the end (Part 4 of `README.md`) they commit `rubric.md`,
+`score.py`, `results.json` and `comparison.md`, push, and submit the fork's address. Help with that
+when asked. Never add `.env` to a commit.
