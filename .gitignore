@@ -2,5 +2,6 @@
 .env
 .venv/
 __pycache__/
-# Your own output. example-results.json is the only result file in the repository.
-results*.json
+# Your own result files, and any classmate's you save here.
+results.json
+results-*.json

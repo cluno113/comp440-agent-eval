@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "results.json",
+  "description": "One student's scores for the conversations in data/conversations.json. Two rules cannot be written in JSON Schema and are checked by viewer.html: each result's scores list has one entry per criterion, in the same order as criteria, and overall is the average of those scores rounded to two decimals.",
+  "type": "object",
+  "required": ["author", "model", "criteria", "results"],
+  "additionalProperties": false,
+  "properties": {
+    "author": {
+      "description": "Your name.",
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "description": "The model that did the scoring, exactly as passed to the API.",
+      "type": "string",
+      "minLength": 1
+    },
+    "criteria": {
+      "description": "The criteria of your rubric, in the order they appear in rubric.md.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["name", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {
+            "description": "The criterion's heading in rubric.md.",
+            "type": "string",
+            "minLength": 1
+          },
+          "description": {
+            "description": "The text under that heading, including what a 1, a 3 and a 5 look like.",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "results": {
+      "description": "One entry per scored conversation. A conversation whose API call failed is left out.",
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["conversation_id", "overall", "scores"],
+        "additionalProperties": false,
+        "properties": {
+          "conversation_id": {
+            "description": "The conversation's id in data/conversations.json.",
+            "type": "integer"
+          },
+          "overall": {
+            "description": "The average of this conversation's scores, rounded to two decimals.",
+            "type": "number",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "scores": {
+            "description": "One entry per criterion, in the same order as criteria.",
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": ["criterion", "score", "reason"],
+              "additionalProperties": false,
+              "properties": {
+                "criterion": {
+                  "description": "The criterion's name, identical to its name in criteria.",
+                  "type": "string",
+                  "minLength": 1
+                },
+                "score": {
+                  "description": "A whole number from 1 to 5.",
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 5
+                },
+                "reason": {
+                  "description": "One sentence from the judge giving the evidence for the score. Once in a while the judge returns an empty reason, and that is allowed.",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
