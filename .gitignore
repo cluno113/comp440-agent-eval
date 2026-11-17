@@ -1,0 +1,6 @@
+# Your API key lives in .env. It must never be committed.
+.env
+.venv/
+__pycache__/
+# Your own output. example-results.json is the only result file in the repository.
+results*.json

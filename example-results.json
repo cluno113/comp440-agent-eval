@@ -1,0 +1,67 @@
+{
+  "author": "Example student",
+  "model": "claude-sonnet-5-5",
+  "criteria": [
+    {
+      "name": "Politeness",
+      "description": "Is the agent courteous to the customer?\n\n- 1: The agent is rude, dismissive or sarcastic.\n- 3: The agent is neutral. It is not rude, but it skips a greeting, a thank-you or an apology where one was called for.\n- 5: The agent is courteous from the first message to the last."
+    }
+  ],
+  "results": [
+    {
+      "conversation_id": 1,
+      "overall": 5.0,
+      "scores": [
+        {
+          "criterion": "Politeness",
+          "score": 5,
+          "reason": "The agent greeted the customer, thanked them, apologized for the delay, thanked them for holding, and closed warmly with 'Thank you for choosing BrownBox. Have a great day!', staying courteous throughout."
+        }
+      ]
+    },
+    {
+      "conversation_id": 2,
+      "overall": 5.0,
+      "scores": [
+        {
+          "criterion": "Politeness",
+          "score": 5,
+          "reason": "The agent greeted the customer, apologized several times, thanked them for the order number and for holding, acknowledged their frustration, and closed warmly with 'Have a great day!', staying courteous throughout."
+        }
+      ]
+    },
+    {
+      "conversation_id": 3,
+      "overall": 5.0,
+      "scores": [
+        {
+          "criterion": "Politeness",
+          "score": 5,
+          "reason": "The agent greeted the customer warmly, apologized repeatedly for the inconvenience, thanked them for information and waiting, stayed courteous when the customer became upset, and closed with a friendly goodbye."
+        }
+      ]
+    },
+    {
+      "conversation_id": 4,
+      "overall": 5.0,
+      "scores": [
+        {
+          "criterion": "Politeness",
+          "score": 5,
+          "reason": "The agent greeted the customer warmly, apologized twice for the issue, thanked them for the order number and address, and closed with 'Have a great day!', though the final 'Goodbye.' was slightly curt."
+        }
+      ]
+    },
+    {
+      "conversation_id": 5,
+      "overall": 5.0,
+      "scores": [
+        {
+          "criterion": "Politeness",
+          "score": 5,
+          "reason": "The agent greeted the customer warmly, thanked them, offered further help, and closed with 'It was my pleasure assisting you. Have a great day!', staying courteous throughout with no rudeness."
+        }
+      ]
+    }
+  ]
+}
