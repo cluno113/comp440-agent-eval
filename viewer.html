@@ -5,465 +5,196 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Evaluation results</title>
 <style>
-  :root {
-    color-scheme: light;
-    --page: #f9f9f7; --surface: #fcfcfb; --border: rgba(11,11,11,0.10);
-    --text: #0b0b0b; --text-2: #52514e; --muted: #898781;
-    --grid: #e1e0d9; --axis: #c3c2b7; --track: #e1e0d9;
-    --a: #2a78d6; --b: #eb6834; --bad: #d03b3b;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      color-scheme: dark;
-      --page: #0d0d0d; --surface: #1a1a19; --border: rgba(255,255,255,0.10);
-      --text: #f0efec; --text-2: #c3c2b7; --muted: #898781;
-      --grid: #2c2c2a; --axis: #383835; --track: #383835;
-      --a: #3987e5; --b: #d95926; --bad: #e66767;
-    }
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; background: var(--page); color: var(--text);
-         font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
-  main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 64px; }
-  h1 { font-size: 24px; margin: 0 0 4px; }
-  h2 { font-size: 17px; margin: 0 0 12px; }
-  p { margin: 0 0 8px; }
-  .muted { color: var(--text-2); }
-  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
-          padding: 16px; margin-top: 16px; }
-  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  @media (max-width: 720px) { .row { grid-template-columns: 1fr; } }
-  .swatch { display: inline-block; width: 12px; height: 12px; border-radius: 3px;
-            margin-right: 6px; vertical-align: -1px; }
-  .picker label { display: block; font-weight: 600; margin-bottom: 4px; }
-  .errors { color: var(--text); border-left: 3px solid var(--bad); padding-left: 12px; margin-top: 10px; }
-  .errors li { margin-bottom: 2px; }
-  .big { font-size: 40px; font-weight: 600; line-height: 1.1; }
-  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
-  @media (max-width: 720px) { .tiles { grid-template-columns: 1fr; } }
-  .tile .value { font-size: 28px; font-weight: 600; }
-  .criterion { display: grid; grid-template-columns: 1fr 44px; gap: 2px 12px; align-items: center; margin-top: 10px; }
-  .criterion .num { text-align: right; font-weight: 600; font-variant-numeric: tabular-nums; }
-  .meter { grid-column: 1 / -1; height: 8px; border-radius: 4px; background: var(--track); overflow: hidden; }
-  .meter div { height: 100%; border-radius: 4px; }
-  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 4px; color: var(--text-2); }
-  .chart { position: relative; }
-  svg { display: block; width: 100%; height: auto; }
-  svg text { fill: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
-  .tip { position: absolute; pointer-events: none; background: var(--surface); color: var(--text);
-         border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 13px;
-         box-shadow: 0 2px 8px rgba(0,0,0,0.15); white-space: nowrap; display: none; }
-  .tip b { font-variant-numeric: tabular-nums; }
-  .tablewrap { overflow-x: auto; }
-  table { border-collapse: collapse; width: 100%; }
-  th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--grid); vertical-align: top; }
-  th { font-size: 13px; color: var(--text-2); font-weight: 600; white-space: nowrap; }
-  td.n { font-variant-numeric: tabular-nums; white-space: nowrap; }
-  tr.item { cursor: pointer; }
-  tr.item:hover td, tr.item:focus td { background: var(--page); }
-  tr.open td { background: var(--page); font-weight: 600; }
-  .detail { display: grid; grid-template-columns: 3fr 2fr; gap: 24px; padding: 8px 0 12px; font-weight: 400; }
-  @media (max-width: 720px) { .detail { grid-template-columns: 1fr; } }
-  .turn { margin-bottom: 8px; }
-  .aside { font-style: italic; color: var(--text-2); }
-  .judge { margin-bottom: 16px; }
-  .judge h3 { font-size: 15px; margin: 0 0 6px; }
-  .score { margin-bottom: 8px; }
-  select { font: inherit; }
+  :root { color-scheme: light dark; }
+  body { font: 15px/1.5 system-ui, sans-serif; max-width: 1100px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { margin: 0 0 4px; }
+  label { margin-right: 32px; font-weight: 600; }
+  .problems { border-left: 3px solid #d03b3b; padding-left: 12px; }
+  table { border-collapse: collapse; margin-top: 16px; }
+  th, td { padding: 6px 12px; border-bottom: 1px solid #8884; text-align: right; }
+  th { vertical-align: bottom; max-width: 150px; }
+  th.sortable, tbody tr.conversation { cursor: pointer; }
+  tbody tr.conversation:hover { background: #8882; }
+  .start { border-left: 2px solid #8888; }      /* first column of each student's scores */
+  .average td { font-weight: 600; }
+  .details { display: grid; grid-template-columns: 3fr 2fr; gap: 32px; }
+  .reason { color: GrayText; margin: 0 0 12px; }
+  #page { overflow-x: auto; }
 </style>
 </head>
 <body>
-<main>
-  <h1>Evaluation results</h1>
-  <p class="muted">Choose the <code>results.json</code> file your script wrote. To compare with a classmate,
-    choose their file as B. The files stay on your computer.</p>
-
-  <div class="card row">
-    <div class="picker">
-      <label for="fileA"><span class="swatch" style="background:var(--a)"></span>Results A</label>
-      <input type="file" id="fileA" accept=".json,application/json">
-      <div id="errorsA"></div>
-    </div>
-    <div class="picker">
-      <label for="fileB"><span class="swatch" style="background:var(--b)"></span>Results B (optional, to compare)</label>
-      <input type="file" id="fileB" accept=".json,application/json">
-      <div id="errorsB"></div>
-    </div>
-  </div>
-
-  <div id="output"></div>
-</main>
+<h1>Evaluation results</h1>
+<p>Choose the <code>results.json</code> file your script wrote. To compare with a classmate, choose their
+  file as Results B. The files stay on your computer.</p>
+<p>
+  <label>Results A <input type="file" id="fileA" accept=".json"></label>
+  <label>Results B (optional) <input type="file" id="fileB" accept=".json"></label>
+</p>
+<div id="problems"></div>
+<div id="page"></div>
 
 <!-- The 100 conversations. A page opened from disk cannot read a .json file, so they are also kept as a .js file. -->
 <script src="data/conversations.js"></script>
 <script>
 "use strict";
 
-const CONVERSATIONS = new Map((window.CONVERSATIONS || []).map(c => [c.id, c]));
-const loaded = { A: null, B: null };      // the two result files, once they pass the checks
-let sortBy = null;                        // current table order
-let openId = null;                        // conversation whose detail is showing
+const conversations = new Map((window.CONVERSATIONS || []).map(c => [c.id, c]));
+const files = { A: null, B: null };   // the result files that are loaded and valid
+let sort = null;                      // which column the list is sorted by: { column, descending }
 
-// ---------- small helpers ----------
-
-// Create an element. Text always goes in through textContent, never innerHTML.
-function el(tag, attrs = {}, ...children) {
+// Make an element. The content is either text or a list of child elements.
+function el(tag, content = "", attributes = {}) {
   const node = document.createElement(tag);
-  for (const [key, value] of Object.entries(attrs)) {
-    if (key === "text") node.textContent = value;
-    else if (key === "style") node.style.cssText = value;
-    else node.setAttribute(key, value);
-  }
-  node.append(...children);
+  if (Array.isArray(content)) node.append(...content); else node.textContent = content;
+  for (const [name, value] of Object.entries(attributes)) node.setAttribute(name, value);
   return node;
 }
-function svg(tag, attrs = {}) {
-  const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
-  for (const [key, value] of Object.entries(attrs)) node.setAttribute(key, value);
-  return node;
-}
-const mean = xs => xs.reduce((a, b) => a + b, 0) / xs.length;
-const fmt = x => x.toFixed(2);
-const color = slot => (slot === "A" ? "var(--a)" : "var(--b)");
+const average = numbers => numbers.reduce((a, b) => a + b, 0) / numbers.length;
 
-// ---------- checking a result file against the format ----------
+// ---------- Checking a file against the results format ----------
 
 // Returns a list of problems in plain words. An empty list means the file is valid.
 function check(data) {
+  if (!data || typeof data.author !== "string" || !Array.isArray(data.results) || !data.results.length) {
+    return ['The file must look like {"author": "your name", "results": [ ... ]} with at least one result.'];
+  }
   const problems = [];
-  const isText = v => typeof v === "string" && v.trim() !== "";
-  if (typeof data !== "object" || data === null || Array.isArray(data)) {
-    return ["The file must be one JSON object with the fields author, model, criteria and results."];
-  }
-  if (!isText(data.author)) problems.push('"author" must be your name, as text.');
-  if (!isText(data.model)) problems.push('"model" must be the name of the model you called, as text.');
-  if (!Array.isArray(data.criteria) || data.criteria.length === 0) {
-    problems.push('"criteria" must be a list with one entry for each criterion in your rubric.');
-  } else {
-    data.criteria.forEach((c, i) => {
-      if (!c || !isText(c.name) || typeof c.description !== "string") {
-        problems.push(`criteria[${i}] must have a "name" and a "description", both text.`);
-      }
-    });
-  }
-  const criteriaValid = problems.length === (isText(data.author) ? 0 : 1) + (isText(data.model) ? 0 : 1);
-  if (!Array.isArray(data.results) || data.results.length === 0) {
-    problems.push('"results" must be a list with one entry for each conversation you scored.');
-    return problems;
-  }
-  if (!criteriaValid) return problems;
-
+  const names = r => Array.isArray(r.scores) ? r.scores.map(s => s && s.criterion).join(" | ") : "";
   const seen = new Set();
   data.results.forEach((r, i) => {
-    const where = `results[${i}]` + (r && Number.isInteger(r.conversation_id) ? ` (conversation ${r.conversation_id})` : "");
-    if (!r || !Number.isInteger(r.conversation_id)) {
-      problems.push(`${where}: "conversation_id" must be a whole number.`);
-      return;
-    }
-    if (seen.has(r.conversation_id)) problems.push(`${where}: this conversation appears more than once.`);
+    const where = `results[${i}]: `;
+    if (!r || !Number.isInteger(r.conversation_id)) return problems.push(where + '"conversation_id" must be a whole number.');
+    if (seen.has(r.conversation_id)) problems.push(where + `conversation ${r.conversation_id} appears more than once.`);
     seen.add(r.conversation_id);
-    if (CONVERSATIONS.size && !CONVERSATIONS.has(r.conversation_id)) {
-      problems.push(`${where}: there is no conversation with this id in data/conversations.json.`);
-    }
-    if (!Array.isArray(r.scores) || r.scores.length !== data.criteria.length) {
-      problems.push(`${where}: "scores" must have ${data.criteria.length} entries, one for each criterion.`);
-      return;
-    }
-    let scoresValid = true;
-    r.scores.forEach((s, j) => {
-      const expected = data.criteria[j].name;
-      if (!s || s.criterion !== expected) {
-        problems.push(`${where}: scores[${j}].criterion must be "${expected}", the name of criterion ${j + 1}.`);
-      }
-      if (!s || !Number.isInteger(s.score) || s.score < 1 || s.score > 5) {
-        problems.push(`${where}: scores[${j}].score must be a whole number from 1 to 5.`);
-        scoresValid = false;
-      }
-      if (!s || typeof s.reason !== "string") problems.push(`${where}: scores[${j}].reason must be text.`);
-    });
-    if (scoresValid) {
-      const average = mean(r.scores.map(s => s.score));
-      if (typeof r.overall !== "number" || Math.abs(r.overall - average) > 0.011) {
-        problems.push(`${where}: "overall" must be the average of the scores, ${fmt(average)}.`);
-      }
-    }
+    if (conversations.size && !conversations.has(r.conversation_id)) problems.push(where + `there is no conversation ${r.conversation_id}.`);
+    if (!Array.isArray(r.scores) || !r.scores.length) return problems.push(where + '"scores" must be a list with one entry for each criterion.');
+    const valid = r.scores.every(s => s && typeof s.criterion === "string" && typeof s.reason === "string"
+      && Number.isInteger(s.score) && s.score >= 1 && s.score <= 5);
+    if (!valid) return problems.push(where + 'each entry in "scores" needs a "criterion" (text), a "score" (a whole number from 1 to 5) and a "reason" (text).');
+    if (names(r) !== names(data.results[0])) problems.push(where + "the criteria must be the same, in the same order, as in the first result.");
+    const expected = average(r.scores.map(s => s.score));
+    if (typeof r.overall !== "number" || Math.abs(r.overall - expected) > 0.011) problems.push(where + `"overall" must be the average of the scores, ${expected.toFixed(2)}.`);
   });
   return problems;
 }
 
-function showProblems(slot, problems) {
-  const box = document.getElementById("errors" + slot);
-  box.replaceChildren();
-  if (!problems.length) return;
-  const list = el("ul");
-  problems.slice(0, 10).forEach(p => list.append(el("li", { text: p })));
-  const more = problems.length > 10 ? ` Showing the first 10 of ${problems.length}.` : "";
-  box.append(el("div", { class: "errors" },
-    el("p", {}, el("strong", { text: "This file does not match the results format." }), more), list));
-}
-
-function readFile(slot, file) {
-  loaded[slot] = null;
-  if (!file) { showProblems(slot, []); render(); return; }
-  const reader = new FileReader();
-  reader.onload = () => {
-    let data, problems;
+async function load(slot, file) {
+  files[slot] = null;
+  let problems = [];
+  if (file) {
     try {
-      data = JSON.parse(reader.result);
+      const data = JSON.parse(await file.text());
       problems = check(data);
+      if (!problems.length) files[slot] = data;
     } catch (error) {
       problems = ["The file is not valid JSON: " + error.message];
     }
-    showProblems(slot, problems);
-    if (!problems.length) loaded[slot] = data;
-    sortBy = null; openId = null;
-    render();
-  };
-  reader.readAsText(file);
-}
-document.getElementById("fileA").addEventListener("change", e => readFile("A", e.target.files[0]));
-document.getElementById("fileB").addEventListener("change", e => readFile("B", e.target.files[0]));
-
-// ---------- drawing ----------
-
-function render() {
-  const out = document.getElementById("output");
-  out.replaceChildren();
-  const slots = ["A", "B"].filter(s => loaded[s]);
-  if (!slots.length) return;
-  if (!CONVERSATIONS.size) {
-    out.append(el("p", { class: "card", text: "The conversation text could not be loaded. Open viewer.html " +
-      "from inside the repository folder, so that it can find data/conversations.js." }));
   }
-
-  const summaries = el("div", { class: slots.length === 2 ? "row" : "" });
-  slots.forEach(s => summaries.append(summaryCard(s)));
-  out.append(summaries);
-  if (slots.length === 2) out.append(agreementCard());
-  out.append(histogramCard(slots), tableCard(slots));
-}
-
-function summaryCard(slot) {
-  const data = loaded[slot];
-  const card = el("div", { class: "card" },
-    el("h2", {}, el("span", { class: "swatch", style: `background:${color(slot)}` }), data.author),
-    el("div", { class: "big", text: fmt(mean(data.results.map(r => r.overall))) }),
-    el("p", { class: "muted", text: `Average overall score, out of 5, across ${data.results.length} conversations. Model: ${data.model}.` }));
-  data.criteria.forEach((criterion, i) => {
-    const average = mean(data.results.map(r => r.scores[i].score));
-    const fill = el("div", { style: `width:${((average - 1) / 4) * 100}%;background:${color(slot)}` });
-    card.append(el("div", { class: "criterion", title: criterion.description },
-      el("div", { text: criterion.name }), el("div", { class: "num", text: fmt(average) }),
-      el("div", { class: "meter", role: "img", "aria-label": `${fmt(average)} on a scale from 1 to 5` }, fill)));
-  });
-  return card;
-}
-
-// The conversations both files scored, with each file's overall score.
-function pairs() {
-  const b = new Map(loaded.B.results.map(r => [r.conversation_id, r.overall]));
-  return loaded.A.results.filter(r => b.has(r.conversation_id))
-    .map(r => ({ id: r.conversation_id, a: r.overall, b: b.get(r.conversation_id) }));
-}
-
-function correlation(xs, ys) {
-  const mx = mean(xs), my = mean(ys);
-  let sxy = 0, sxx = 0, syy = 0;
-  xs.forEach((x, i) => { sxy += (x - mx) * (ys[i] - my); sxx += (x - mx) ** 2; syy += (ys[i] - my) ** 2; });
-  return sxx && syy ? sxy / Math.sqrt(sxx * syy) : null;
-}
-
-function agreementCard() {
-  const both = pairs();
-  const card = el("div", { class: "card" }, el("h2", { text: "How closely do the two judges agree?" }));
-  if (both.length < 2) {
-    card.append(el("p", { text: "The two files have fewer than two conversations in common, so there is nothing to compare." }));
-    return card;
+  const box = document.getElementById("problems");
+  box.replaceChildren();
+  if (problems.length) {
+    const more = problems.length > 10 ? [`... and ${problems.length - 10} more.`] : [];
+    box.append(el("div", [
+      el("p", `Results ${slot} does not match the results format:`),
+      el("ul", [...problems.slice(0, 10), ...more].map(p => el("li", p))),
+    ], { class: "problems" }));
   }
-  const r = correlation(both.map(p => p.a), both.map(p => p.b));
-  const gap = mean(both.map(p => Math.abs(p.a - p.b)));
-  const tile = (value, label, note) => el("div", { class: "tile" },
-    el("div", { class: "value", text: value }), el("div", { text: label }), el("div", { class: "muted", text: note }));
-  card.append(el("div", { class: "tiles" },
-    tile(String(both.length), "Conversations scored by both", "Only these are compared."),
-    tile(r === null ? "n/a" : fmt(r), "Correlation of overall scores",
-      r === null ? "Not defined, because one judge gave every conversation the same score."
-                 : "1 means the judges rank the conversations the same way. 0 means no relationship."),
-    tile(fmt(gap), "Average gap, in points", "The average distance between the two overall scores for the same conversation.")));
-  return card;
+  sort = null;
+  location.hash = "";
+  show();
 }
+document.getElementById("fileA").addEventListener("change", event => load("A", event.target.files[0]));
+document.getElementById("fileB").addEventListener("change", event => load("B", event.target.files[0]));
+window.addEventListener("hashchange", show);
 
-// Columns chart: how many conversations got each overall score, in bins half a point wide.
-function histogramCard(slots) {
-  const BINS = 8;                                   // 1 to 1.5, 1.5 to 2, ..., 4.5 to 5
-  const counts = {};
-  slots.forEach(s => {
-    counts[s] = new Array(BINS).fill(0);
-    loaded[s].results.forEach(r => counts[s][Math.min(BINS - 1, Math.max(0, Math.floor((r.overall - 1) / 0.5 + 1e-9)))]++);
-  });
-  const top = Math.max(1, ...slots.flatMap(s => counts[s]));
-  const step = [1, 2, 5, 10, 20, 25, 50, 100].find(n => top / n <= 5) || 100;
-  const yMax = Math.ceil(top / step) * step;
+// ---------- The two pages ----------
 
-  const W = 720, H = 250, left = 40, right = 12, topPad = 12, bottom = 44;
-  const plotW = W - left - right, plotH = H - topPad - bottom, band = plotW / BINS;
-  const y = n => topPad + plotH - (n / yMax) * plotH;
-  const chart = svg("svg", { viewBox: `0 0 ${W} ${H}`, role: "img",
-    "aria-label": "Number of conversations at each overall score. The same numbers are in the table below." });
-
-  for (let n = 0; n <= yMax; n += step) {
-    chart.append(svg("line", { x1: left, x2: W - right, y1: y(n), y2: y(n), stroke: n ? "var(--grid)" : "var(--axis)" }));
-    const label = svg("text", { x: left - 8, y: y(n) + 4, "text-anchor": "end" });
-    label.textContent = n;
-    chart.append(label);
-  }
-  for (let i = 0; i <= BINS; i++) {
-    const label = svg("text", { x: left + i * band, y: H - bottom + 18, "text-anchor": "middle" });
-    label.textContent = 1 + i * 0.5;
-    chart.append(label);
-  }
-  const title = svg("text", { x: left + plotW / 2, y: H - 6, "text-anchor": "middle" });
-  title.textContent = "Overall score";
-  chart.append(title);
-
-  const barW = slots.length === 2 ? 20 : 24, gap = 2;
-  const groupW = slots.length * barW + (slots.length - 1) * gap;
-  const tip = el("div", { class: "tip" });
-  const wrap = el("div", { class: "chart" }, chart, tip);
-  for (let i = 0; i < BINS; i++) {
-    const bars = [];
-    slots.forEach((s, k) => {
-      const n = counts[s][i];
-      if (!n) return;
-      const x = left + i * band + (band - groupW) / 2 + k * (barW + gap);
-      const h = (n / yMax) * plotH, r = Math.min(4, h);
-      const base = topPad + plotH;   // rounded at the top, square at the baseline
-      const bar = svg("path", { fill: color(s),
-        d: `M${x},${base} V${base - h + r} Q${x},${base - h} ${x + r},${base - h} H${x + barW - r} Q${x + barW},${base - h} ${x + barW},${base - h + r} V${base} Z` });
-      chart.append(bar);
-      bars.push(bar);
-    });
-    // The whole band is the hover target, so the pointer does not have to land on a thin bar.
-    const hit = svg("rect", { x: left + i * band, y: topPad, width: band, height: plotH, fill: "transparent", tabindex: 0 });
-    const range = `${1 + i * 0.5} to ${1.5 + i * 0.5}`;
-    const show = () => {
-      tip.replaceChildren(el("div", { class: "muted", text: `Overall score ${range}` }));
-      slots.forEach(s => tip.append(el("div", {},
-        el("span", { class: "swatch", style: `background:${color(s)}` }),
-        el("b", { text: counts[s][i] }), ` conversations, ${loaded[s].author}`)));
-      tip.style.display = "block";
-      const scale = chart.getBoundingClientRect().width / W;
-      const bandLeft = (left + i * band) * scale, bandRight = (left + (i + 1) * band) * scale;
-      const x = i < BINS / 2 ? bandRight + 4 : bandLeft - tip.offsetWidth - 4;
-      tip.style.left = Math.max(0, Math.min(x, wrap.clientWidth - tip.offsetWidth)) + "px";
-      tip.style.top = "0px";
-      bars.forEach(b => b.setAttribute("opacity", "0.8"));
-    };
-    const hide = () => { tip.style.display = "none"; bars.forEach(b => b.removeAttribute("opacity")); };
-    hit.addEventListener("pointermove", show); hit.addEventListener("pointerleave", hide);
-    hit.addEventListener("focus", show); hit.addEventListener("blur", hide);
-    chart.append(hit);
-  }
-
-  const card = el("div", { class: "card" }, el("h2", { text: "How many conversations got each overall score?" }));
-  if (slots.length === 2) {
-    card.append(el("div", { class: "legend" }, ...slots.map(s =>
-      el("span", {}, el("span", { class: "swatch", style: `background:${color(s)}` }), loaded[s].author))));
-  }
-  card.append(wrap);
-  return card;
-}
-
-function tableCard(slots) {
-  const two = slots.length === 2;
-  const byId = {};
-  slots.forEach(s => loaded[s].results.forEach(r => { (byId[r.conversation_id] ||= {})[s] = r; }));
-  const rows = Object.keys(byId).map(id => {
-    const row = { id: Number(id), ...byId[id] };
-    row.gap = row.A && row.B ? Math.abs(row.A.overall - row.B.overall) : null;
-    return row;
-  });
-
-  const orders = two
-    ? { gap: "Largest gap first", number: "Conversation number" }
-    : { low: "Lowest score first", high: "Highest score first", number: "Conversation number" };
-  if (!orders[sortBy]) sortBy = Object.keys(orders)[0];
-  const only = slots[0];
-  rows.sort({
-    gap: (p, q) => (q.gap ?? -1) - (p.gap ?? -1) || p.id - q.id,
-    low: (p, q) => p[only].overall - q[only].overall || p.id - q.id,
-    high: (p, q) => q[only].overall - p[only].overall || p.id - q.id,
-    number: (p, q) => p.id - q.id,
-  }[sortBy]);
-
-  const select = el("select", { id: "sort" });
-  Object.entries(orders).forEach(([value, label]) => select.append(el("option", { value, text: label })));
-  select.value = sortBy;
-  select.addEventListener("change", () => { sortBy = select.value; render(); });
-
-  const head = el("tr", {}, el("th", { text: "#" }), el("th", { text: "The customer's first message" }));
-  slots.forEach(s => head.append(
-    el("th", {}, el("span", { class: "swatch", style: `background:${color(s)}` }), `${loaded[s].author}: criteria`),
-    el("th", { text: "Overall" })));
-  if (two) head.append(el("th", { text: "Gap" }));
-  const body = el("tbody");
-
-  rows.forEach(row => {
-    const conversation = CONVERSATIONS.get(row.id);
-    const start = conversation ? firstCustomerLine(conversation.conversation) : "";
-    const tr = el("tr", { class: "item" + (row.id === openId ? " open" : ""), tabindex: 0 },
-      el("td", { class: "n", text: row.id }), el("td", { class: "muted", text: start }));
-    slots.forEach(s => {
-      const r = row[s];
-      tr.append(el("td", { class: "n", text: r ? r.scores.map(x => x.score).join(" · ") : "not scored" }),
-                el("td", { class: "n", text: r ? fmt(r.overall) : "" }));
-    });
-    if (two) tr.append(el("td", { class: "n", text: row.gap === null ? "" : fmt(row.gap) }));
-    const toggle = () => { openId = openId === row.id ? null : row.id; render(); };
-    tr.addEventListener("click", toggle);
-    tr.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
-    body.append(tr);
-    if (row.id === openId) {
-      body.append(el("tr", {}, el("td", { colspan: 2 + slots.length * 2 + (two ? 1 : 0) }, detail(row, slots))));
+// One row per conversation, holding that conversation's result from each loaded file.
+function rows() {
+  const byId = new Map();
+  for (const slot of ["A", "B"]) {
+    for (const result of files[slot]?.results || []) {
+      if (!byId.has(result.conversation_id)) byId.set(result.conversation_id, { id: result.conversation_id });
+      byId.get(result.conversation_id)[slot] = result;
     }
-  });
-
-  return el("div", { class: "card" },
-    el("h2", { text: two ? "Where do the two judges disagree?" : "Scores for each conversation" }),
-    el("p", { class: "muted" }, "Click a row to read the conversation and the reasons. ",
-      el("label", { for: "sort", text: "Order: " }), select),
-    el("div", { class: "tablewrap" }, el("table", {}, el("thead", {}, head), body)));
-}
-
-function firstCustomerLine(text) {
-  const part = text.split("\n\n").find(p => p.startsWith("Customer:")) || text;
-  const line = part.replace(/^Customer:\s*/, "").replace(/\s+/g, " ");
-  return line.length > 110 ? line.slice(0, 110) + " ..." : line;
-}
-
-function detail(row, slots) {
-  const conversation = CONVERSATIONS.get(row.id);
-  const text = el("div");
-  if (conversation) {
-    text.append(el("p", { class: "muted", text: `Issue: ${conversation.issue_area}. Customer sentiment: ` +
-      `${conversation.customer_sentiment}. Agent experience: ${conversation.agent_experience_level}.` }));
-    conversation.conversation.split("\n\n").forEach(part => {
-      const match = part.match(/^(Agent|Customer):\s*([\s\S]*)$/);
-      text.append(match ? el("div", { class: "turn" }, el("strong", { text: match[1] + ": " }), match[2])
-                        : el("div", { class: "turn aside", text: part }));
-    });
   }
-  const judges = el("div");
-  slots.forEach(s => {
-    const r = row[s];
-    const block = el("div", { class: "judge" },
-      el("h3", {}, el("span", { class: "swatch", style: `background:${color(s)}` }),
-        r ? `${loaded[s].author}: overall ${fmt(r.overall)}` : `${loaded[s].author}: not scored`));
-    (r ? r.scores : []).forEach(x => block.append(el("div", { class: "score" },
-      el("strong", { text: `${x.score} of 5: ${x.criterion}` }), el("div", { class: "muted", text: x.reason.trim() || "The judge gave no reason." }))));
-    judges.append(block);
+  return [...byId.values()];
+}
+
+function show() {
+  const page = document.getElementById("page");
+  const row = rows().find(r => String(r.id) === location.hash.slice(1));
+  page.replaceChildren(...(row ? detailsPage(row) : listPage()));
+  if (row) window.scrollTo(0, 0);
+}
+
+// The list: every conversation with its score on each criterion and its overall score.
+function listPage() {
+  const slots = ["A", "B"].filter(slot => files[slot]);
+  if (!slots.length) return [];
+
+  // The columns of the table. "value" gets a column's number out of a row.
+  const columns = [{ label: "Conversation", value: row => row.id }];
+  for (const slot of slots) {
+    files[slot].results[0].scores.forEach((s, i) =>
+      columns.push({ label: s.criterion, start: i === 0, value: row => row[slot]?.scores[i].score }));
+    columns.push({ label: "Overall", decimals: true, value: row => row[slot]?.overall });
+  }
+  if (slots.length === 2) {
+    columns.push({ label: "Gap", start: true, decimals: true,
+      value: row => row.A && row.B ? Math.abs(row.A.overall - row.B.overall) : undefined });
+  }
+
+  // Sorted by conversation number, or by the largest gap first when two files are loaded.
+  sort ??= slots.length === 2 ? { column: columns.length - 1, descending: true } : { column: 0, descending: false };
+  const key = columns[sort.column].value;
+  const list = rows().sort((p, q) => ((key(p) ?? -1) - (key(q) ?? -1)) * (sort.descending ? -1 : 1) || p.id - q.id);
+
+  const format = (column, number) => number === undefined ? "" : column.decimals ? number.toFixed(2) : String(number);
+  const cell = (tag, column, text) => el(tag, text, column.start ? { class: "start" } : {});
+
+  const authors = el("tr", [el("th"), ...slots.map(slot =>
+    el("th", files[slot].author, { colspan: files[slot].results[0].scores.length + 1, class: "start" }))]);
+  const headers = el("tr", columns.map((column, i) => {
+    const th = cell("th", column, column.label + (i === sort.column ? (sort.descending ? " ▼" : " ▲") : ""));
+    th.classList.add("sortable");
+    th.onclick = () => { sort = { column: i, descending: i === sort.column && !sort.descending }; show(); };
+    return th;
+  }));
+  const averages = el("tr", columns.map((column, i) => {
+    const numbers = list.map(column.value).filter(n => n !== undefined);
+    return cell("td", column, i === 0 ? "Average" : numbers.length ? average(numbers).toFixed(2) : "");
+  }), { class: "average" });
+  const body = list.map(row => {
+    const tr = el("tr", columns.map(column => cell("td", column, format(column, column.value(row)))), { class: "conversation" });
+    tr.onclick = () => { location.hash = row.id; };
+    return tr;
   });
-  return el("div", { class: "detail" }, text, judges);
+
+  return [
+    el("p", "Click a row to read that conversation and the reasons for its scores. Click a column heading to sort."),
+    el("table", [el("thead", [authors, headers]), el("tbody", [averages, ...body])]),
+  ];
+}
+
+// The details for one conversation: its text, and each judge's scores and reasons.
+function detailsPage(row) {
+  const conversation = conversations.get(row.id);
+  const turns = conversation
+    ? conversation.conversation.split("\n\n").map(turn => el("p", turn))
+    : [el("p", "The conversation text was not found. Open viewer.html from inside the repository folder.")];
+  const judges = ["A", "B"].filter(slot => row[slot]).flatMap(slot => [
+    el("h3", `${files[slot].author}: overall ${row[slot].overall.toFixed(2)}`),
+    ...row[slot].scores.flatMap(s => [
+      el("strong", `${s.score} of 5: ${s.criterion}`),
+      el("p", s.reason || "The judge gave no reason.", { class: "reason" }),
+    ]),
+  ]);
+  return [
+    el("p", [el("a", "Back to the list", { href: "#" })]),
+    el("h2", `Conversation ${row.id}`),
+    el("div", [el("div", turns), el("div", judges)], { class: "details" }),
+  ];
 }
 </script>
 </body>

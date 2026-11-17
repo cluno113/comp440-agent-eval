@@ -4,8 +4,6 @@ These are conversations 1 to 5 from `conversations.json`.
 
 ## Conversation 1
 
-Issue: Order. Customer sentiment: neutral. Agent experience: experienced.
-
 **Customer:** Hi, I recently purchased an air conditioner from BrownBox, and I was wondering about the delivery process.
 
 **Agent:** Hello, thank you for contacting BrownBox customer support. I'd be happy to assist you with that. May I have your order number, please?
@@ -37,8 +35,6 @@ Issue: Order. Customer sentiment: neutral. Agent experience: experienced.
 **Agent:** You're welcome. Thank you for choosing BrownBox. Have a great day!
 
 ## Conversation 2
-
-Issue: Order. Customer sentiment: negative. Agent experience: junior.
 
 **Agent:** Hello, thank you for calling BrownBox Customer Support. My name is John, how may I assist you today?
 
@@ -75,8 +71,6 @@ Issue: Order. Customer sentiment: negative. Agent experience: junior.
 **Agent:** Goodbye.
 
 ## Conversation 3
-
-Issue: Cancellations and returns. Customer sentiment: frustrated. Agent experience: junior.
 
 **Agent:** Thank you for calling BrownBox Customer Support. This is John. How may I assist you today?
 
@@ -138,8 +132,6 @@ Issue: Cancellations and returns. Customer sentiment: frustrated. Agent experien
 
 ## Conversation 4
 
-Issue: Cancellations and returns. Customer sentiment: neutral. Agent experience: junior.
-
 **Agent:** Hello, thank you for calling BrownBox Customer Support. My name is Sarah, how may I assist you today?
 
 **Customer:** Hi, I recently purchased an electric kettle from your website, but it's not working properly. I would like to return or exchange it.
@@ -175,8 +167,6 @@ Issue: Cancellations and returns. Customer sentiment: neutral. Agent experience:
 **Agent:** Goodbye.
 
 ## Conversation 5
-
-Issue: Warranty. Customer sentiment: neutral. Agent experience: junior.
 
 **Agent:** Thank you for calling BrownBox Customer Support. My name is Sarah. How can I assist you today?
 

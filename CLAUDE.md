@@ -1,123 +1,108 @@
 # COMP 440 activity: evaluating support agents with a rubric
 
-This repository is a 45-minute in-class activity. The student writes a rubric in `rubric.md`, has
-you write `score.py`, which scores the 100 conversations in `data/conversations.json` against that
-rubric with Claude Sonnet, and then compares their results with a classmate's in `viewer.html`.
-`README.md` is the student's brief. Read it before you do anything.
+This is a 45-minute in-class activity. The student writes a rubric in `rubric.md` and asks you to
+write `score.py`, which has Claude Sonnet score the 100 conversations in `data/conversations.json`
+against that rubric. The student then compares results with a classmate in `viewer.html`.
+`README.md` is the student's brief.
 
-The student has very little time and is not being graded on the code. What helps most is a small
-script that works the first time, and short answers. Before you write a file, tell the student in
-three or four lines what it will do, so they can explain it to a classmate afterwards.
+The student has little time and is not graded on the code. Write the shortest, plainest script that
+works the first time, and keep your replies short. Before you write `score.py`, say in three or four
+lines what it will do, so the student can explain it to a classmate.
 
-## Helping with the rubric
+## The rubric
 
-Help when the student asks. The rubric is their own claim about what good support looks like, and
-they will have to defend it to a classmate, so start from what they say matters to them and draft
-from that. Do not swap in criteria of your own. Keep the format the script depends on: three
-criteria, each a `## ` heading with the criterion's name, one sentence saying what it measures, and
-one line each describing a 1, a 3 and a 5. Good criteria are about what the agent did and can be
-judged from the text alone. Nearly every agent in this data is polite, so a criterion like
-politeness gives every conversation a 5 and tells the student nothing. Say so if they propose one.
+Help with it when asked, starting from what the student says matters to them. Keep the format:
+three criteria, each a `## ` heading with the criterion's name, one sentence saying what it
+measures, and one line each for what a 1, a 3 and a 5 look like. Nearly every agent in this data is
+polite, so a criterion like politeness gives every conversation a 5 and tells the student nothing.
 
 ## What score.py does
 
-1. Reads `rubric.md`. Each `## ` heading starts a criterion: the heading is its name, and the text
-   under it, up to the next heading, is its description.
-2. Reads `data/conversations.json`, a list of objects with an `id` and a `conversation`.
-3. For each conversation, sends Sonnet the criteria and the conversation text, and gets back a
-   one-sentence reason and a whole-number score from 1 to 5 for each criterion. Send only the
-   `conversation` field. The other fields are labels from the dataset (customer sentiment, agent
-   experience), and showing them to the judge would hand it part of the answer.
-4. Computes `overall` in Python as the average of the conversation's scores, rounded to two
-   decimals. The model does not produce the overall score.
-5. Writes `results.json` in exactly the format below, then prints how many conversations were
-   scored and the average overall score.
+1. Reads `rubric.md`. The three `## ` headings are the names of the criteria.
+2. Reads `data/conversations.json`, a list of objects. Use only each one's `id` and `conversation`.
+   The other fields are labels from the dataset, and the judge must not see them.
+3. Asks Sonnet to score each conversation, with the call below.
+4. Computes `overall` in Python: the average of the three scores, rounded to two decimals.
+5. Writes `results.json` in the format below, and prints how many conversations were scored and
+   the average overall score.
 
-Keep it to one file of about 80 lines, using only the standard library, `anthropic` and
-`python-dotenv`, which are already installed. Give it a `--limit N` option that scores only the
-first N conversations, because the student tests on 5 before paying for 100. Ask the student for
-their name once and store it in a constant at the top of the file for the `author` field.
+Give it a `--limit N` option that scores only the first N conversations. Keep the student's name in
+a constant named `AUTHOR` at the top. If `ANTHROPIC_API_KEY` is not set after `load_dotenv()`, stop
+with one line telling the student to put the key in `.env`.
+
+## The call to Sonnet
+
+Use this as written. It was tested for this activity, and the API has changed since you were
+trained: the model string has no date on the end, the SDK no longer accepts `temperature`, and the
+model rejects a prefilled reply.
+
+```python
+INSTRUCTIONS = """You are grading how well a customer support agent handled a customer.
+Score the agent on each criterion of the rubric below, in order. For each criterion, give one
+sentence of evidence from the conversation, then a whole-number score from 1 to 5.
+
+"""
+
+class Score(BaseModel):
+    reason: str
+    score: Literal[1, 2, 3, 4, 5]
+
+class Scores(BaseModel):
+    criterion_1: Score
+    criterion_2: Score
+    criterion_3: Score
+
+client = anthropic.Anthropic(max_retries=5)
+response = client.messages.parse(
+    model="claude-sonnet-5-5",
+    max_tokens=2000,
+    system=INSTRUCTIONS + rubric,          # rubric is the whole text of rubric.md
+    messages=[{"role": "user", "content": conversation["conversation"]}],
+    output_format=Scores,
+)
+scores = response.parsed_output            # scores.criterion_1.reason, scores.criterion_1.score, ...
+```
+
+- Keep `INSTRUCTIONS` word for word. Every student's script uses the same text, so that two
+  students' results differ only because of their rubrics.
+- Run five requests at a time with `ThreadPoolExecutor(max_workers=5)`. The class shares one key.
+- If a call fails for any reason, print one line saying which conversation was skipped and carry on.
 
 ## The format of results.json
-
-`viewer.html` checks every rule here and refuses a file that breaks one, listing what is wrong.
-`results.schema.json` is the same format as a JSON Schema, and `example-results.json` is a valid file.
 
 ```json
 {
   "author": "The student's name",
-  "model": "claude-sonnet-5-5",
-  "criteria": [
-    {"name": "The heading from rubric.md", "description": "The text under that heading"}
-  ],
   "results": [
     {
-      "conversation_id": 17,
+      "conversation_id": 1,
       "overall": 3.67,
       "scores": [
-        {"criterion": "The heading from rubric.md", "score": 4, "reason": "One sentence from the judge."}
+        {"criterion": "First heading in rubric.md", "score": 4, "reason": "One sentence from the judge."},
+        {"criterion": "Second heading in rubric.md", "score": 3, "reason": "One sentence from the judge."},
+        {"criterion": "Third heading in rubric.md", "score": 4, "reason": "One sentence from the judge."}
       ]
     }
   ]
 }
 ```
 
-- `criteria` lists the rubric's criteria in the order they appear in `rubric.md`.
-- Each result's `scores` has one entry per criterion, in that same order, and each `criterion` is
-  identical to the name in `criteria`.
-- `score` is a whole number from 1 to 5. `reason` is text.
+- One entry in `results` for each conversation that was scored.
+- `scores` has one entry for each criterion, in the rubric's order, the same in every result.
+- `score` is a whole number from 1 to 5.
 - `overall` is the average of that conversation's scores, rounded to two decimals.
-- A conversation whose API call failed is left out of `results`.
 
-## Calling the API
+`viewer.html` checks these rules and lists what is wrong with a file that breaks one.
+`results.schema.json` is the same format as a JSON Schema.
 
-These settings were tested against the live API for this activity. The API has changed recently,
-so use them as written even where you remember something different.
+## Running it
 
-```python
-client = anthropic.Anthropic(max_retries=5)   # reads ANTHROPIC_API_KEY from the environment
+Run `uv run python score.py --limit 5` yourself to see that it works. It takes a few seconds. Then
+tell the student to open `viewer.html` in a browser and choose `results.json`. Leave the full run,
+`uv run python score.py`, to the student: it takes about a minute and costs about 65 cents, and they
+should read the judge's reasons on the first five before paying for 100.
 
-response = client.messages.create(
-    model="claude-sonnet-5-5",
-    max_tokens=2000,
-    system=instructions_and_rubric,
-    messages=[{"role": "user", "content": conversation_text}],
-    output_config={"effort": "low", "format": {"type": "json_schema", "schema": schema}},
-)
-if response.stop_reason == "end_turn":
-    reply = json.loads(next(block.text for block in response.content if block.type == "text"))
-```
+## The key
 
-- The model string is `claude-sonnet-5-5`, with no date on the end.
-- Do not pass `temperature`, `top_p` or `top_k`. The installed SDK no longer accepts them and
-  raises a `TypeError`.
-- Do not start the assistant's reply for it (prefill). This model rejects that too.
-- Get JSON back with `output_config.format`, as above. Build the schema with one fixed property
-  per criterion (`criterion_1`, `criterion_2`, `criterion_3`), each an object with `reason` (string)
-  and then `score` (integer with `"enum": [1, 2, 3, 4, 5]`). List every property in `required` and
-  set `"additionalProperties": false` on every object. Fixed properties guarantee exactly one score
-  per criterion. Putting `reason` before `score` makes the judge look at the evidence before it
-  commits to a number.
-- `"effort": "low"` asks the judge for a quick answer. Each call takes about three seconds, and it
-  is the setting the timing below was measured with.
-- Run at most 5 requests at a time, for example with
-  `concurrent.futures.ThreadPoolExecutor(max_workers=5)`. The whole class shares one key and one
-  rate limit. `max_retries=5` lets the SDK wait and retry when the limit is hit.
-- If a call raises `anthropic.APIError`, or `stop_reason` is anything other than `"end_turn"`,
-  print one line saying which conversation was skipped and carry on. One bad conversation should not
-  lose the other 99.
-
-A full run of 100 conversations takes about a minute and costs about 65 cents.
-
-## The API key
-
-The key is in `.env`, which git ignores. Call `load_dotenv()` at the start of the script. Never
-print the key, never put it in a file other than `.env`, and never `export` it in the shell: a key
-in the shell's environment can make Claude Code itself start using it. Do not commit `.env` or
-suggest that the student push this repository.
-
-## Running things
-
-Use `uv run python score.py --limit 5` first, then `uv run python score.py`. After a run, tell the
-student to open `viewer.html` in a browser and choose `results.json`. If the viewer lists problems
-with the file, fix the script to match the format above.
+The key is in `.env`, which git ignores. Never print it, never `export` it, and never copy it into
+another file. Do not suggest committing or pushing this repository.
