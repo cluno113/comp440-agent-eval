@@ -1,0 +1,2105 @@
+{
+  "author": "Claire Kuno",
+  "results": [
+    {
+      "conversation_id": 1,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The customer only needed delivery information, and the agent checked the order and confirmed it shipped and would arrive within two business days, but never resolved the missing shipping confirmation email or tracking number the customer asked about."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a rough two-business-day arrival window and told the customer to have someone available, but did not provide a tracking number, resend the confirmation email, or say how the customer would be notified."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or stake, and the agent handled the request promptly without needless delay by checking the status during the chat."
+        }
+      ]
+    },
+    {
+      "conversation_id": 2,
+      "overall": 2.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent only checked with shipping and relayed an expected delivery by end of day, taking no action such as escalating, reshipping, or refunding express shipping fees."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent gave a delivery estimate of end of day but only vaguely said 'let us know, and we will take appropriate action' with no specified action, contact method, or notification."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer said they need the sweatshirt for an event tomorrow and paid for express, but the agent only acknowledged frustration and offered no expediting, escalation, or backup alternative."
+        }
+      ]
+    },
+    {
+      "conversation_id": 3,
+      "overall": 2.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent initiated the return and exchange process and gave a Rs. 500 coupon, but the customer must still pay for and ship the camera back, and the replacement only dispatches after receipt, so the fix is partial."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave the return address, said the replacement would ship within 3-5 business days of receipt, and promised SMS/email tracking, but did not say when the customer should ship the camera, how the coupon will be delivered, or give a confirmation number."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer mentioned a defective item just received, but the agent handled it as routine and offered no expedited exchange or advance replacement, only a coupon after the customer complained about shipping costs."
+        }
+      ]
+    },
+    {
+      "conversation_id": 4,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent initiated a replacement during the call, confirmed the shipping address, and waived the return of the old kettle, which resolves the problem."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a 3-5 business day shipping window and said no return was needed, but never said how the customer would be notified (tracking email, confirmation number) and ended with a generic 'contact us' line."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay, going straight to a replacement without requiring a return."
+        }
+      ]
+    },
+    {
+      "conversation_id": 5,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The customer only needed guidance and information, and the agent explained the registration steps, coverage and one-year warranty period correctly, though the agent did not register the product on the call or share a direct link."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent told the customer to create an account on the website and register the product with model number and purchase date, but gave no URL, no deadline for registering, and no confirmation method, and the customer was left to do it alone."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 6,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent only told John to start the return himself on the account page and never initiated the return or replacement, so he is left to do the work, though the information given was useful."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent laid out the sequence (initiate return, receive an emailed label, ship it, then get a tracking email) with a 5-7 business day timeline and email notifications, but did not give a confirmation number and the timeline is ambiguous about whether it covers the return or the replacement."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request routinely without needless delay, which is appropriate here."
+        }
+      ]
+    },
+    {
+      "conversation_id": 7,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent promised to email a return label and offered a goodwill discount code, which moves the return forward, but still charged a $5.99 fee on a defective item and gave no refund or replacement yet, leaving the customer to complete the return themselves."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent explained the steps (email label, print, attach, drop off at USPS, refund after receipt), but gave no timeline for the email or the refund, no notification method for the refund, and no detail on when the discount code would arrive."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request without needless delay, moving efficiently through the return process."
+        }
+      ]
+    },
+    {
+      "conversation_id": 8,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed information about the loyalty program, and the agent looked up the order and correctly answered how many points were earned, how to redeem them, which products are excluded and when they expire."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said points would be added within 24 hours of delivery and explained redemption on the next purchase, but gave no notification method or confirmation, and closed with a generic 'reach out if you have questions'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 9,
+      "overall": 3.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The customer only needed information, and the agent verified the account, confirmed the 50 points earned, and explained redemption, though the claim that 1 point equals $1 (so 50 points = $50) is questionable and the agent never confirmed the points were actually posted, so the information may not be fully correct or complete."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The conversation ends with only a generic 'contact us if you have further questions' and the agent says points will be added within 24 hours without confirming whether that has happened or how the customer would verify it."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 10,
+      "overall": 4.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent initiated the return and exchange process during the call, arranged pickup and replacement packaging, and got expedited shipping approved for the new printer, which resolves the problem."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent said the team would contact John within 24 hours to schedule pickup and delivery, that an email with details would follow shortly, and that the new printer would arrive within two business days, but it did not clarify whether the replacement ships before or after pickup, give a confirmation number, or say when the email would arrive."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "When John said he needed the printer urgently, the agent checked with shipping and secured expedited delivery within two business days, which is a concrete action taken in response to the urgency."
+        }
+      ]
+    },
+    {
+      "conversation_id": 11,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent rescheduled the delivery for tomorrow between 10 am and 12 pm during the chat, which directly fixes the missed-delivery problem."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a specific date and time window and said a confirmation email would follow shortly, but did not tell the customer to be present, mention tracking, or say what happens if delivery fails again."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer said they needed the cooker urgently and the agent responded by finding the next-day slot and booking it, which meets the need for speed."
+        }
+      ]
+    },
+    {
+      "conversation_id": 12,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent verified the customer's identity and reset the password during the chat, and the customer confirmed a successful login, so the problem was fully resolved."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent told the customer to log in with the temporary password and change it soon, and the customer said that was all they needed, but the agent gave no specific steps for changing it and no timeline beyond 'as soon as possible'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request promptly and efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 13,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "Senior agent Mark applied a 10% store credit to the customer's account during the call, a concrete action that settled the price-drop complaint, and the customer accepted it as fair."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said the credit was added and can be used on future purchases, but gave no amount in dollars, no expiration, no confirmation number or email, and no instructions on how to redeem it."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request without needless delay, escalating to a senior agent promptly once the junior agent lacked authority."
+        }
+      ]
+    },
+    {
+      "conversation_id": 14,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent explained the hardcover vs paperback difference and offered a plausible seller-based explanation, then escalated the remaining paperback discrepancy to senior staff, but the discrepancy itself was not resolved or verified during the chat."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent said senior team members would email Alex within 24-48 hours with an update, giving who, how, and when, though no confirmation or ticket number was provided."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request promptly with a reasonable escalation and no needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 15,
+      "overall": 2.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent submitted a request to logistics to contact the driver and attempt the address change, which is a real action, but the outcome is not guaranteed and the problem is not resolved during the conversation."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent said logistics will try to reach the driver and the customer will be updated by email or phone, but gave no timeline, no confirmation number, and only 'it may take some time'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The agent acknowledged the urgency and checked with shipping and logistics teams, finding a driver-contact option, but did not formally escalate or expedite with a timeframe, and the final request was left with no speed commitment."
+        }
+      ]
+    },
+    {
+      "conversation_id": 16,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "Rachel diagnosed the glitch and manually applied the $100 exchange discount during the call, directly resolving the problem."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "Rachel said an updated invoice would arrive by email 'shortly', which names the notification method but gives no firm timeline, and she did not say what to do if it doesn't arrive."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned frustration after an hour of trying but no deadline or high stake, and Rachel handled the issue promptly without needless delay, though she only briefly apologized for the frustration."
+        }
+      ]
+    },
+    {
+      "conversation_id": 17,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent contacted the shipping department and got the shipment upgraded to priority at no extra cost, a concrete action that addresses the delay, though no refund of the standard shipping fee was offered."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a timeline of delivery within two business days, but did not mention a tracking update, a confirmation number, how the customer would be notified, or what to do if it fails to arrive."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "When the customer said they needed the pendrive for work and couldn't wait, the agent escalated to the shipping department and obtained a priority upgrade at no cost with a two-business-day delivery, directly acting on the urgency."
+        }
+      ]
+    },
+    {
+      "conversation_id": 18,
+      "overall": 2.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent only escalated the issue to the shipping team for investigation, with no replacement, reshipment or refund, so the shirt problem is not actually resolved, though escalation is a minimal action."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent promised an update within 24 hours via email, which gives a timeline and notification method, but later said only 'we will do our best' and left unclear who would act and what outcome to expect."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer said they needed the shirt for an event this weekend, and the agent acknowledged the frustration but offered nothing faster such as a supervisor escalation, priority handling or a replacement, and fell back on 'do our best'."
+        }
+      ]
+    },
+    {
+      "conversation_id": 19,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "After the transfer, the specialist verified the customer's date of birth and reactivated the account, which solved the stated problem during the call."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The specialist told the customer they could log in now, but gave no confirmation number, no way to follow up if login failed, and no mention of any email confirmation, ending with only a generic 'feel free to reach out'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer wanted to buy a television but stated no deadline or stake, and the agents handled the request without needless delay beyond a standard transfer, though the customer had to repeat the issue to the specialist."
+        }
+      ]
+    },
+    {
+      "conversation_id": 20,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The customer only needed information about the exchange offer, and the agent correctly explained the 20% discount and how to claim it at checkout, though it did not cover details like old-blender eligibility or the offer's end date."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent told the customer to order on the website and select the exchange option, but gave no timeline, no offer expiry, and only a vague 'reach out to us' for problems."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay beyond a brief hold."
+        }
+      ]
+    },
+    {
+      "conversation_id": 21,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed information, and the agent correctly answered how to register, the two-year warranty period, what it covers, and the need to keep the receipt."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent explained the registration steps (Product Registration tab, model number, name and email), but gave no timeline, no mention of a confirmation email or number, and the customer was left to do it alone."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 22,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent agreed to a replacement Smart Watch with free shipping and emailed the return label during the call, which is a concrete action, though the agent never confirmed the replacement order was actually placed and the customer's 'Cancel' button issue was oddly treated as a device defect."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent said the return label and instructions were emailed, but gave no timeline for the replacement shipment, no order confirmation or tracking notice, and no deadline for returning the defective watch."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 23,
+      "overall": 3.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent initiated the return process and promised a confirmation email, which is a concrete action, but it never confirmed a replacement or an immediate refund, and the pointless troubleshooting-guide hold added nothing."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said a confirmation email would arrive 'shortly' and that the refund would come 7-10 business days after receipt with an email confirmation, but never explained how to send the T-shirt back (label, drop-off, deadline) or gave a firm timeline for the return steps."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request routinely, though the unnecessary hold for a troubleshooting guide on a damaged T-shirt added needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 24,
+      "overall": 2.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent applied a goodwill discount and explained the stock-out, but did not fix the delivery problem itself (no expedite, escalation, alternative item or cancellation/refund option), leaving the customer to wait."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent said the order would ship when stock arrives and be delivered in 2-3 business days, but gave no restock date, no notification method such as a tracking email, and ended with a vague 'contact us again'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer said they needed the power bank urgently, yet the agent only apologized and promised to 'do our best to expedite' without any concrete action such as prioritizing the order, offering a different in-stock item, or a refund option."
+        }
+      ]
+    },
+    {
+      "conversation_id": 25,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed the seller's return policy, and the agent looked it up and gave a complete, specific answer (30-day window, but this item is final sale and not returnable)."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The customer needed no further action and the call ended with the question answered, but the agent offered only a generic 'reach out in the future' with no discussion of alternatives or what happens next."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or stakes, and the agent handled the request promptly with only a brief hold and no needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 26,
+      "overall": 1.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 1,
+          "reason": "The agent refused the refund and offered only a discount code, generic fit tips and a suggestion to donate or sell the diapers, so nothing was resolved and the customer's request for a refund was left unmet."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 1,
+          "reason": "The call ended with only a generic 'contact us if you have further questions' and no specific next step, owner or timeline."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The customer mentioned no deadline, but the agent handled the call without needless delay, although the agent also did not escalate or look for a better option for a customer who was clearly frustrated."
+        }
+      ]
+    },
+    {
+      "conversation_id": 27,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent checked eligibility, generated the two-year warranty and added it to the order during the call, which fully resolved the request, though payment handling was never explained."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said an email with order details and warranty information would be sent, but gave no timeline, and the customer was not told how or when payment would be taken or what the coverage start date is."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or urgent stakes, and the agent handled the request efficiently without needless delay, though asking why they wanted the warranty was a minor unnecessary step."
+        }
+      ]
+    },
+    {
+      "conversation_id": 28,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The customer only needed an explanation of the hidden charge, and the agent identified it as a $10.99 remote-location shipping fee, answered the follow-up about avoiding it (free shipping over $50), and the customer was satisfied."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "No next steps were needed or stated; the agent closed with a generic 'contact us if you have questions' and the customer's issue was fully answered, so nothing remained pending."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 29,
+      "overall": 2.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent could not fix the delivery speed and only gave the Wednesday-next-week ETA plus a $20 discount on a future purchase, which is a partial gesture that does not solve the customer's need for the shorts."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent gave the estimated delivery date but never explained how the $20 discount would be delivered or used, and offered no tracking info, notification method, or follow-up steps."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer said they needed the shorts urgently and the agent only apologized, then said expediting was impossible, offering no escalation or alternative such as a refund or local pickup, and just a future discount."
+        }
+      ]
+    },
+    {
+      "conversation_id": 30,
+      "overall": 1.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent contacted the shipping department to locate the package, a minor action, but offered no replacement, reshipment, or refund, so nothing was actually resolved."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent said they would personally monitor the order and keep the customer updated, but gave no timeline, no notification method, and no reference number, and the call closed with 'contact us if you have further questions'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 1,
+          "reason": "The customer said the cooktop was needed for their restaurant and they were losing business, yet the agent only said 'I understand your frustration' and offered no expedited replacement, escalation, or alternative, then asked 'anything else I can assist with?'."
+        }
+      ]
+    },
+    {
+      "conversation_id": 31,
+      "overall": 2.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent refused the refund and offered repair/replacement, which the customer declined; the only action was escalating to a supervisor, so the actual refund problem is unresolved."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said the supervisor would respond within 24 hours and collected email and phone, giving a timeline, but did not say which channel would be used, what outcome to expect, or provide a case/confirmation number."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer stressed the watch was received only yesterday and was defective, and the agent only repeated policy and apologized; the only escalation was at the customer's demand and with a routine 24-hour timeline, with no expediting."
+        }
+      ]
+    },
+    {
+      "conversation_id": 32,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent canceled the delayed order and placed a new expedited replacement order at no extra cost during the call, which directly addresses the problem."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said the new order would arrive by tomorrow afternoon, but gave no confirmation number, no tracking or email notification, and no mention of what happens if the original package arrives or if the new one is late."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "When the customer said the party was in two days, the agent contacted the shipping team and offered a free expedited replacement that meets the deadline."
+        }
+      ]
+    },
+    {
+      "conversation_id": 33,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent verified John's identity and unblocked the account during the call, and the customer confirmed he could log in."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The problem was fully resolved on the call so little follow-up was needed, but the agent gave no guidance on avoiding another lockout or what to do if the error returns beyond 'let me know if you face any further issues'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request without needless delay, although the cache-clearing detour before the actual unblock cost a little time."
+        }
+      ]
+    },
+    {
+      "conversation_id": 34,
+      "overall": 4.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent checked with the technical team and walked Emily through clearing Chrome cache and cookies, which resolved the sign-up problem during the call."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "Next steps were clear and completed within the call (clear cache, retry sign-up), but the agent gave no follow-up path beyond 'feel free to reach out' since none was needed."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "Emily mentioned no deadline or high stakes, and the agent handled the request promptly without needless delay, resolving it in one call."
+        }
+      ]
+    },
+    {
+      "conversation_id": 35,
+      "overall": 1.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent only looked up the status and confirmed the refund was already initiated; no action was taken, and the customer's request to expedite or escalate was refused, so nothing changed."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent gave a 10-14 business day window and said to contact us again if it doesn't arrive, but gave no reference number, no notification method, no owner of the next step, and the closing advice was vague and inconsistent with the stated timeline ('within the next few days')."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 1,
+          "reason": "The customer said they needed the money urgently and asked for a supervisor; the agent apologized and said it was unavailable but offered no escalation, callback, or alternative, so handling was essentially routine."
+        }
+      ]
+    },
+    {
+      "conversation_id": 36,
+      "overall": 2.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent said they would 'initiate the process' to retrieve and redeliver the package, which is a partial action, but no replacement, reshipment, or confirmed fix was made and the customer is left waiting 2-3 business days."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent promised an email with the updated delivery status 'as soon as possible' and gave a 2-3 business day window, but then said no specific timeframe could be guaranteed, and gave no confirmation or reference number."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer said 'please hurry' and asked for expediting, but the agent only said 'we'll try our best' and offered no expedited shipping, escalation, or replacement, which is just verbal acknowledgment."
+        }
+      ]
+    },
+    {
+      "conversation_id": 37,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The customer only needed information, and the agent looked up the 500-point balance and explained the Rs. 500 value, the 1000-point minimum, and how to earn more points, though the statement that she can use points for an air cooler while also needing 1000 points was a bit contradictory and left her unable to redeem right now."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent explained how to earn points (Rs. 100 spent = 10 points, referral bonuses) but gave no concrete next step, such as how many points are still needed, how much to spend, or how to refer friends, and closed with a generic 'contact us if you have questions'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or urgency, and the agent handled the request efficiently without needless delay apart from a brief hold to check the balance."
+        }
+      ]
+    },
+    {
+      "conversation_id": 38,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The customer only needed information, and the agent looked up CameraPro's return policy and gave a clear answer (30 days, full refund, original condition and packaging, accessories included), plus a helpful pointer to the Product Information section for warranty details."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent told the customer to check the Product Information and Tags section before buying, but the conversation ended without any further next step, and the customer needed none beyond that, so there is no timeline or follow-up to evaluate."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request promptly with only a brief hold and no needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 39,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent emailed a prepaid return label, scheduled a courier pickup and promised a refund on receipt, which resolves the return request, though the refund itself is still pending."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said the label was emailed, the courier would call within 24 hours, and a refund would follow receipt, but gave no refund timeline, no confirmation number, and a vague pickup window of up to 5 business days."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the return efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 40,
+      "overall": 4.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed order confirmation and status, and the agent looked up the order and correctly confirmed it succeeded and is being processed, giving complete information."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent said the order should ship within 24 hours and that a shipping confirmation email with tracking would follow, which gives a timeline and notification method, though the customer has no action to take and the 'within 24 hours' is approximate."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay beyond brief holds."
+        }
+      ]
+    },
+    {
+      "conversation_id": 41,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed information, and the agent looked up the order status (confirmed, shipping) and the backpack dimensions (17.5 x 12.5 x 6 inches), fully answering both questions."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a 3-5 business day delivery window but did not say how the customer would be notified, such as a tracking email or number, and ended with only a generic 'reach out' line."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled both requests promptly with only brief holds and no needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 42,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "Lisa from the reactivation team verified John's details and reactivated his account during the call, which fixed the stated problem."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The account was reactivated and John said he needed nothing more, so no further steps were really required, but Lisa never asked him to confirm he could log in and only said to reach out with questions."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "John mentioned no deadline or high stakes, and the agent handled the request without needless delay, though the transfer and repeated verification added some friction."
+        }
+      ]
+    },
+    {
+      "conversation_id": 43,
+      "overall": 3.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent said they would initiate the exchange, which is a specific action toward resolution, but no confirmation number or replacement shipment was given and the customer still has to wait for the return label."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said the team would contact the customer 'shortly' with a return label and instructions, and asked the customer to keep the Pendrive and packaging ready, but gave no timeline, contact method, or confirmation number."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request without needless delay, though the extra confirmation questions about laptop model and troubleshooting were slightly redundant."
+        }
+      ]
+    },
+    {
+      "conversation_id": 44,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent initiated the return process during the call, which resolves the customer's request, though it came after an unnecessary troubleshooting detour and a confusing return-fee statement."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said a confirmation email would arrive 'shortly' with return details, but gave no timeline for shipping the item back, no refund timing, and no instructions for what the customer must do."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request without needless delay beyond a brief hold for a troubleshooting guide that was not needed."
+        }
+      ]
+    },
+    {
+      "conversation_id": 45,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent initiated the return and arranged a courier pickup during the call, which is a concrete action, though the refund itself still depends on the product reaching the warehouse."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a timeline (courier contact within 24 hours, refund within 3-5 business days after receipt) and told the customer to keep the item packed, but did not give a confirmation or return number, did not say how the customer would be notified of the refund, and did not ask for bank details even though CoD refunds usually need them."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the damaged-item return efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 46,
+      "overall": 2.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent confirmed eligibility, explained the self-service return steps, and escalated the case to senior staff, but no replacement was issued and the customer still has to file the return themselves."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent gave the return steps and a 3-5 business day processing estimate after receipt, but the escalation follow-up was only 'as soon as possible' with no timeline or contact method, and no confirmation number was given."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The agent initially said it could not expedite, then escalated after the customer pushed back, but the escalation promised only that seniors would 'try their best' and offered no faster option or advance replacement that met the customer's need."
+        }
+      ]
+    },
+    {
+      "conversation_id": 47,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent collected bank details and said they would initiate the refund and arrange a pickup, which is a real action, but the refund is only promised and the pickup has no confirmation, so the customer is left to wait."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a 7-10 business day refund window and told the customer to repack the item, but never gave a pickup date or time, a confirmation or reference number, or how the customer would be notified, and the closing 'contact us if issues' is vague."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay, apart from a brief hold."
+        }
+      ]
+    },
+    {
+      "conversation_id": 48,
+      "overall": 5.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed guidance on placing an order, and the agent confirmed stock and walked through every step to a completed order, with a correct and complete answer on delivery timing."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 5,
+          "reason": "The agent said an order confirmation email would arrive shortly, that delivery takes two to three business days, and that a shipping confirmation email with tracking would follow, so the customer knew what to expect and how they would be notified."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 49,
+      "overall": 2.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent checked the refund status and confirmed the refund was initiated, but the conversation is inconsistent (the customer only received the item yesterday, yet the return is said to be already received) and the agent only reports a process already underway rather than taking a new action such as an expedite or escalation."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said the customer needs to do nothing, the refund will take 7-14 business days, and an email confirmation will arrive once done, but the timeline is vague about its start point and no pickup or reference details were given."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer said the refund was needed immediately and was frustrated, but the agent only said it could not be expedited and offered no escalation or alternative, merely acknowledging the frustration."
+        }
+      ]
+    },
+    {
+      "conversation_id": 50,
+      "overall": 4.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent said 'I have initiated the replacement process' after the customer chose a replacement, which is a concrete action that resolves the problem, though the faulty camera return was never addressed."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent said the customer would get an email with shipping and tracking details within 24 hours, with delivery in 3-5 business days, but did not explain how to return the faulty camera."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer stated no deadline or high stakes, and the agent handled the request efficiently, even offering to expedite the replacement to a 24-hour dispatch without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 51,
+      "overall": 2.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent placed a new order and requested combined shipping, which is a concrete action, but it did not fix the missing watch, and the refund was only conditional and left vague as 'as soon as possible'."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent promised a confirmation email and delivery within 24 hours, but gave no timeline for the refund, no tracking details, and no clear owner, and the conditional refund versus new order setup stayed confusing."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer said they needed the watch today for a meeting tomorrow, and the agent only acknowledged this verbally, said they could not expedite, and offered no escalation or alternative that met the deadline; the new order may not even arrive in time."
+        }
+      ]
+    },
+    {
+      "conversation_id": 52,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent initiated a return and exchange and scheduled a pickup at no cost to the customer, which resolves the problem, though the exchange shipment details (replacement timing) were never specified."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent gave a pickup within 24 hours, told the customer to keep the product ready, and said an email with pickup details would follow, but did not explain when or how the replacement would arrive."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently with a pickup within 24 hours and no needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 53,
+      "overall": 2.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent verified eligibility but took no action herself, telling the customer to initiate the return on the website and never creating the return request or giving specific instructions."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent mentioned a confirmation email with shipping instructions and a 7-10 business day refund after return, but gave no timeline for approval, no details on the website steps, and left the customer to do everything."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer said 7-10 days was 'a long time' and asked to expedite; the agent just said it couldn't be expedited and offered no alternative, escalation, or extra help."
+        }
+      ]
+    },
+    {
+      "conversation_id": 54,
+      "overall": 2.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The supervisor refused the refund and only said an email with replacement process details would be sent, so no replacement was actually initiated during the call and the customer is left to follow instructions on their own."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The supervisor said an email would arrive and the customer should follow its instructions, but gave no timeline, no details on shipping or battery return, and no confirmation number."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The customer mentioned no deadline or special stake beyond a two-month-old phone with a battery issue and frustration, and the agent handled it without needless delay, though escalation to a supervisor was prompted by the customer's demand rather than the agent."
+        }
+      ]
+    },
+    {
+      "conversation_id": 55,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The billing agent processed the $50 refund and removed the warranty during the call, though the first agent could only transfer the customer and the customer had to repeat everything."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The billing agent gave a timeline of 3-5 business days for the credit, but gave no confirmation number or email notification and did not say whether the warranty removal would be confirmed in writing."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, and the agents handled the request without needless delay beyond a redundant transfer where the customer had to repeat their information."
+        }
+      ]
+    },
+    {
+      "conversation_id": 56,
+      "overall": 3.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent diagnosed the failed delivery, updated the address, and committed to reshipping within 24 hours, then escalated the compensation request by transferring to a senior agent, so the core problem was acted on even though compensation was unresolved."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a clear timeline for reshipment (within 24 hours) and said a new tracking number would be emailed, but the transfer ended the conversation with no explanation of what the senior agent would do and no confirmation number, and delivery time was left vague."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer expressed frustration over the delay and asked for expedited shipping or a discount; the agent refused both, offered only 'do our best,' and escalated only after the customer demanded compensation, so urgency was acknowledged but little extra was done."
+        }
+      ]
+    },
+    {
+      "conversation_id": 57,
+      "overall": 2.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent gave the delivery estimate and offered a refund and discount, and promised to escalate to shipping, but the escalation is only a promise with no outcome and the customer's need for faster delivery went unresolved."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent said shipping would contact Mary 'as soon as possible' by collecting her phone and email, but gave no timeline, no confirmation number, and no stated contact method or what would happen."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "Mary said she needed the coffee maker urgently and the agent checked expedite options and escalated, but expediting was refused and the only extras were a refund and discount she didn't want, so the urgency was acknowledged with little real action."
+        }
+      ]
+    },
+    {
+      "conversation_id": 58,
+      "overall": 3.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "Rachel sent a return label during the call, which is a concrete action toward the return, but the customer was still told a $20 fee would be deducted even though the item is not working, and the agent's own statement that defective items carry no fee was never applied, so the resolution is only partial."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The customer knows to use the emailed label and that a refund follows after receipt, but no timeline for the refund, no return deadline, no confirmation number, and no notification method were given, and the fee remains unresolved."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request without needless delay, though the customer was transferred and had to repeat all details, which added friction."
+        }
+      ]
+    },
+    {
+      "conversation_id": 59,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent initiated the return process during the chat and confirmed an exception to the 14-day policy with a full refund, though the refund still depends on inspection and the customer must wait."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said an email with return instructions would come and that the refund takes 7-10 business days after inspection, but gave no timeline for the email, no return confirmation number, and no clear notice of when the refund will start."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay, though the agent contradicted itself by saying the refund depends on inspection and then promising a full refund."
+        }
+      ]
+    },
+    {
+      "conversation_id": 60,
+      "overall": 1.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 1,
+          "reason": "The agent took no action: no refund, reshipment, or escalation, and even discouraged the customer's cancellation request, leaving the order still delayed with no known cause."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 1,
+          "reason": "The agent only vaguely promised to 'follow up as soon as I have an update' with no timeline, no method of contact, and no owner, then closed with 'reach out if you have questions'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 1,
+          "reason": "The customer said she urgently needs baby food for her child and cannot wait, yet the agent only expressed understanding and talked her out of cancelling, offering no expedite, escalation, or alternative."
+        }
+      ]
+    },
+    {
+      "conversation_id": 61,
+      "overall": 4.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent checked expedited options, processed the order with 2-day shipping, and charged the card, which fully fulfilled the customer's request during the conversation."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent said a confirmation email with order details and tracking would arrive 'shortly' and that shipping is 2-day, so the customer knows how they'll be notified, but 'shortly' is vague and there is no order number or explicit delivery date."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer asked for expedited delivery and the agent responded by offering 2-day and overnight options with prices, then processed the chosen option; no explicit deadline was stated, and the request was handled without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 62,
+      "overall": 4.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed information about the exchange offer, and the agent gave a complete answer covering eligibility, how the discount is determined, how to proceed, and the evaluation timeline."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent explained the steps (place the order with the exchange option, wait for the team to call to schedule an evaluation, learn the discount, then pay) and gave a 2-3 business day estimate, but did not say how the customer would be notified or give a confirmation number."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, only frustration over missing website details, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 63,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent initiated the return process during the call and confirmed refund eligibility, which is a concrete action, though the refund itself is pending the customer shipping the diapers back."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent said a return email with a prepaid label would arrive within 24 hours and the refund would be processed 3-5 business days after receipt, which gives timelines and notification, but did not give a confirmation or return number or say how long the customer has to return the item."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, only frustration over damaged packaging, and the agent handled the request promptly without needless delay, though a hold period and no offer to refund before return were routine."
+        }
+      ]
+    },
+    {
+      "conversation_id": 64,
+      "overall": 3.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent found a similar in-stock model that ships to the customer's location, which solves the core problem, but the agent never actually placed the order and left the customer to do it themselves."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent said the customer could place the order now with delivery within three business days, but did not say how to place it, whether the agent would do it, or how the customer would get a confirmation or tracking, and the call ended with only a generic 'reach out to us'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "When the customer said they needed the fan urgently, the agent pivoted from the two-week restock to an alternative model deliverable in three business days, which directly addresses the urgency."
+        }
+      ]
+    },
+    {
+      "conversation_id": 65,
+      "overall": 3.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "Agent offered a replacement or refund and arranged a replacement kettle to be sent right away, a concrete action, though it didn't address the original delayed package or confirm the order was actually placed."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "Agent gave a two-business-day delivery estimate but never said how Sarah would be notified (tracking email, confirmation number) or what happens to the original package, and closed with a generic 'reach out if you have questions'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "Sarah said she needed the kettle for her office as soon as possible, and the agent promptly offered a replacement and said 'right away', but did not offer expedited shipping or confirm the two-day window meets her need."
+        }
+      ]
+    },
+    {
+      "conversation_id": 66,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent confirmed the return was received, committed to a refund within 3-5 business days, and promised a courier reimbursement credit within 24-48 hours, but the refund itself was only promised after inspection rather than issued during the call."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave timelines (refund in 3-5 business days to the original payment method, courier credit in 24-48 hours), but did not say how the customer would be notified or provide a confirmation number."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay, though the damaged item arguably warranted a faster refund."
+        }
+      ]
+    },
+    {
+      "conversation_id": 67,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The customer needed information about COD availability and how to pay; the agent correctly explained COD is unavailable, offered alternatives (card, net banking, EMI) and gave complete step-by-step purchase guidance, though no action was taken on the order."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent walked the customer through the checkout steps and invited him to return if there were problems, but gave no timeline, confirmation, or follow-up mechanism beyond 'contact us'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 68,
+      "overall": 2.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent checked the order status and offered a partial refund, but never actually issued it or fixed the late-delivery problem, and the customer declined it as inadequate."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent only said the order should arrive by tomorrow evening and closed with vague lines like 'we will do everything we can' and 'feel free to reach out', with no tracking info, confirmation of the refund, or notification plan."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer said the shoes were needed for an event this weekend, and the agent acknowledged it and checked with shipping, but then offered nothing faster, such as an alternative or escalation, only a partial refund that didn't meet the deadline."
+        }
+      ]
+    },
+    {
+      "conversation_id": 69,
+      "overall": 1.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 1,
+          "reason": "Neither agent solved the problem: the first said no exceptions were possible and transferred Tom to the store locator team, which found no stock, and Tom left to buy elsewhere."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 1,
+          "reason": "Tom ended the call with only a vague suggestion to check the online store periodically or reach out again, with no owner, timeline or notification method."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "Tom never stated a deadline, but he showed escalating frustration and a firm need for an air cooler; the agents offered only the same alternatives and did not escalate or find a faster option, though they did avoid needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 70,
+      "overall": 3.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent agreed to process a $40 (20%) refund right away, which is a concrete action, but it doesn't solve John's actual need for the latest model, and the refund was a questionable workaround that he accepted only as 'better than nothing'."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent said only that the refund would be processed 'right away', with no timeline for when the money arrives, no confirmation number or email, and no plan for how John will be notified when the latest model is back in stock."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "John mentioned no deadline and said he was willing to wait, so urgency was low, and the agent handled the request without needless delay, though it did not offer to check back on stock or set up a restock notification."
+        }
+      ]
+    },
+    {
+      "conversation_id": 71,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent confirmed the 10% instant cashback, processed the purchase, and applied the discount for a total of $89.99, which answered the customer's question and completed the purchase."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent never said what happens after the purchase, such as an order confirmation email, shipping timeline, or tracking details, and ended with only a generic 'reach out if you have questions'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent noted the offer was limited-time and handled the purchase promptly without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 72,
+      "overall": 3.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent explained the recall and said a prepaid label would be emailed, but did not clearly confirm sending it during the chat, and the refund only happens after Jane ships the item back, so the customer still has to act and wait."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a 24-hour timeline for the emailed label and told Jane to check spam, and explained that the refund follows receipt of the item, but gave no refund timeline, no confirmation number, and no shipping deadline."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay, though the safety-recall aspect was not stressed (e.g., advising her to stop using the backpack)."
+        }
+      ]
+    },
+    {
+      "conversation_id": 73,
+      "overall": 2.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent only suggested clearing the cache or trying another browser and never reset the code or unlocked the account, even though the customer confirmed the code was correct and the account was locked from too many attempts."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 1,
+          "reason": "The only next step was 'contact us again if the issue persists', with no timeline, no owner, no reference number and no notification method, which is the vague kind of follow-up the rubric scores lowest."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the call at a normal pace, though it did not take the obvious action of resetting the code to avoid a repeat call."
+        }
+      ]
+    },
+    {
+      "conversation_id": 74,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed information, and the agent gave complete answers on the delivery charge ($20 standard, $10 extra for expedited), delivery times, and the total cost ($270)."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The customer hadn't placed an order, and the agent never said how to place it, but the customer only wanted pricing information and ended the chat with no further action required; the agent gave no explicit next steps, so this is a middling fit."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or stakes, and the agent answered promptly and directly without needless delay, offering the expedited option unprompted."
+        }
+      ]
+    },
+    {
+      "conversation_id": 75,
+      "overall": 3.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent escalated the case to the senior support team, which is a concrete action, but the denial was not resolved and the customer was left to wait for a decision."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a 24-48 hour timeline for the senior team to get back, but did not say how the customer would be contacted, who would contact her, or give a case number, and the call closed on vague 'do our best' and 'reach out' language."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no explicit deadline, only disappointment and a failed repair after one month; the agent escalated without needless delay, though the agent did not try to expedite or offer an interim option."
+        }
+      ]
+    },
+    {
+      "conversation_id": 76,
+      "overall": 2.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent answered the responsibility question and told the customer to follow the manual, but offered no concrete help with the lens and body setup, and the initial answer ('customer's responsibility') was vague and not verified."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent told the customer to follow the manual and contact BrownBox if still stuck, but gave no contact method, timeline, or specific guidance on what would happen next."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request without needless delay, though it did not go very deep."
+        }
+      ]
+    },
+    {
+      "conversation_id": 77,
+      "overall": 3.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent said they would create a new exchange order and explained the refund-on-return process, but never confirmed the order was placed, gave no order number, and did not provide return shipping instructions or a label, leaving the customer with a partial fix."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent gave a vague 7-10 business day estimate counted from receipt of the return, but did not say how the customer would return the item, who would send a label, when the new watch would ship, or how they would be notified."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay, though a defective item was exchanged at the customer's cost up front with no expedite option offered."
+        }
+      ]
+    },
+    {
+      "conversation_id": 78,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed information, and the agent correctly gave the order status (confirmed, shipping within 24 hours), explained the four statuses, and stated the one-year warranty, though the warranty answer was brief."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said the order should ship within 24 hours but did not say how Lisa would be notified (such as a tracking email), and the call ended with only a generic 'reach out if you have questions'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request promptly without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 79,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent initiated the return, emailed return instructions, processed a replacement watch order, and applied a $10 credit, all during the call, which fully resolves the damaged-item problem."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a 3-5 business day replacement window and said return instructions were emailed, but did not say whether a tracking or confirmation email would follow, when the damaged watch must be returned, or whether the replacement ships before the return arrives."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay, moving from complaint to replacement and credit in one call."
+        }
+      ]
+    },
+    {
+      "conversation_id": 80,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only wanted an order status, and the agent looked up the order and correctly reported it as shipped and in transit with 2-3 business days to delivery, which fully answers the question."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a delivery window of 2-3 business days but no tracking number, no notification method, and no guidance on what to do if the package is late, so the next steps are only partly specified."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, only a mild worry about delay, and the agent handled the request promptly without needless delay, checking the order after a one-minute hold."
+        }
+      ]
+    },
+    {
+      "conversation_id": 81,
+      "overall": 3.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent confirmed return eligibility and offered a refund or replacement, but no refund or return was initiated; the customer still has to email photos and wait, and return shipping of the damaged geyser was never addressed."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent told the customer to email photos to support@brownbox.com and said the refund takes 3-5 business days after that, but gave no return shipping instructions, no confirmation number or notification method, and no clear start of the timeline."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer mentioned no deadline or high stake, and the agent handled the request at a reasonable pace, though it asked redundantly for the reason for return after the customer already explained it."
+        }
+      ]
+    },
+    {
+      "conversation_id": 82,
+      "overall": 4.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed information, and the agent answered each question (account required, name/email/password needed, nothing else) completely and without contradiction."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The customer's next step (create an account and shop) is clear and the agent said they can start shopping immediately, though it's a simple self-service step with no further follow-up needed; the closing was a generic 'reach out if you need help'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request promptly without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 83,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent approved the return, committed to emailing a return label, and agreed to reimburse courier charges, which is a concrete action, though the refund itself depends on the printer arriving and being inspected."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said a return label would be emailed and that the refund would follow after the printer was received and inspected, with courier reimbursement in 3-5 business days, but gave no timeline for the label email or the refund and no confirmation number."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer stated no deadline or high stakes, and the agent handled the request without needless delay beyond a short hold."
+        }
+      ]
+    },
+    {
+      "conversation_id": 84,
+      "overall": 3.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent resent the codes during the call and the customer confirmed receiving them, which solved the immediate problem, though the cause of the earlier failure was never investigated."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "After the codes arrived the agent gave no next step, such as completing the order verification, and closed with only a vague promise that the issue won't happen again and an invitation to reach out."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The customer wanted to place an order and was frustrated by the delay, and the agent apologized and resent the codes without delay but did not otherwise expedite or escalate; the customer mentioned no explicit deadline, so the handling was adequate but unremarkable."
+        }
+      ]
+    },
+    {
+      "conversation_id": 85,
+      "overall": 3.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "David updated the address, initiated a new delivery attempt, and fixed the tracking information during the call, which resolves both problems, though the customer had to repeat the issue after transfer and the delivery is not yet completed."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "David gave a timeline of two business days for delivery and said tracking is now updated, but did not say how the customer would be notified, give a confirmation number, or name who would follow up."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The customer said they were frustrated and had a repeated failed delivery, and the agent acknowledged it and fixed the issue with a two-day delivery promise, but offered no expediting, escalation, or compensation, and the customer wasn't given a deadline-specific response."
+        }
+      ]
+    },
+    {
+      "conversation_id": 86,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The customer only needed order status and an explanation of statuses, and the agent gave the status (processing) and a complete, correct explanation of the status meanings."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said a tracking email will arrive once the order ships, which covers how the customer will be notified, but gave no timeline for when shipping would occur."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or stakes, and the agent handled the request promptly without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 87,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent initiated the return and arranged a pickup during the call and confirmed courier charges would be reimbursed, though the refund itself is only issued after the item is received and bank details were never actually collected."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent said a confirmation email with pickup details would arrive 'shortly' but gave no pickup date or refund timeline, and never actually collected the bank account number and IFSC code or told the customer how to submit them."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 88,
+      "overall": 2.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent offered only a refund the customer didn't want and a vague escalation, so the bp monitor delivery problem was not resolved and the customer was left waiting."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said senior staff would contact Emily by phone or email within 24 hours, which gives a who and when, but it doesn't say what they'd do or how the delivery would be sped up, and it ended with the vague 'will do their best'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "Emily said the monitor was urgent for her sick mother, yet the agent only acknowledged it, offered no expedite or alternative such as local pickup, and set a 24-hour callback that is slow for an urgent need."
+        }
+      ]
+    },
+    {
+      "conversation_id": 89,
+      "overall": 1.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent only confirmed the order was in transit and offered a 10% discount on a future purchase, which does not fix the late delivery or give an ETA."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 1,
+          "reason": "The agent ended with vague assurances like 'we'll make sure it's delivered as soon as possible' and gave no timeline, owner, or notification method."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "The customer was frustrated about a one-day delay and asked for the delivery to be hastened, and the agent apologized and offered a goodwill discount but did not expedite or escalate anything."
+        }
+      ]
+    },
+    {
+      "conversation_id": 90,
+      "overall": 4.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent scheduled a pickup for the backpack and initiated the return and refund process during the call, which resolves the customer's request."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent said an email with pickup details would arrive 'shortly', that the item must be in original packaging with tags, and that the refund takes 3-5 business days after receipt with an email notification, though the pickup confirmation lacked a specific date or time restated and 'shortly' is vague."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay, checking alternatives briefly and then arranging the pickup."
+        }
+      ]
+    },
+    {
+      "conversation_id": 91,
+      "overall": 2.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent refused the replacement, ran basic troubleshooting, and told the customer to hire an electrician, so no action was taken to fix the problem and the customer was left to follow up alone."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The only next step was to hire an electrician and come back if a manufacturing defect is found, with no timeline, no explanation of what documentation is needed, no case number, and no way to follow up."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The customer did not state a deadline, though they did express frustration and said the fan is under warranty; the agent handled the call without needless delay, but offered no escalation or alternative for the customer's disappointment."
+        }
+      ]
+    },
+    {
+      "conversation_id": 92,
+      "overall": 2.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 3,
+          "reason": "The agent checked with the shipping partner and escalated to the shipping team, which is a real action, but gave no cause, no delivery date and no replacement or refund, so the problem is not resolved."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent promised to email a tracking number and keep Sarah updated, but gave no timeline for the email, the updates or the delivery, and no way she would be notified of progress."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "Sarah said she needed the power bank as soon as possible, and the agent escalated the issue and said it was 'as soon as possible', but offered no expedited shipping, replacement or other alternative."
+        }
+      ]
+    },
+    {
+      "conversation_id": 93,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent answered the question that the speaker has no TV wall mount and then added a compatible $25 mount to the order at the customer's request, which resolved the need."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent confirmed the new total of $175 but never said when the mount would ship, whether the order would arrive together, or how the customer would be notified, and ended with only a generic 'reach out if you have questions'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the request efficiently without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 94,
+      "overall": 4.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "The agent walked the customer through installing the sink faucet and stove knobs step by step, and the customer confirmed both parts worked, so the problem was fully resolved during the call."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The problem was solved on the call so no further steps were needed, but the agent closed only with a generic 'feel free to reach out' and no confirmation of completion or follow-up details."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer said he needed to give the gift today, and the agent immediately started live troubleshooting and resolved it in the same call, which met the deadline, though the agent never explicitly acknowledged the deadline."
+        }
+      ]
+    },
+    {
+      "conversation_id": 95,
+      "overall": 3.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent investigated, found the shipping charge was a company error, and created a reimbursement request during the call, which resolves the problem."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave a 5-7 business day refund timeline, but did not say how Mike would be notified, give a confirmation number, or say what to do if the refund does not arrive."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 2,
+          "reason": "Mike mentioned no deadline, but he voiced dissatisfaction at having to call; the agent only repeated generic apologies and 'we'll do our best' with no extra action such as feedback escalation or expedited refund."
+        }
+      ]
+    },
+    {
+      "conversation_id": 96,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent placed the order for in-store pickup at a local partner store, a specific action that solves the customer's need for baby food, though the store name and location were never confirmed."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent said an email with pickup details and an order number would arrive within 24 hours, but did not name the store or say when the food would be ready, and a 24-hour wait is long for someone running low."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer said she was running low on baby food and the agent offered an alternative, local store pickup, that could get her food sooner, but the confirmation email taking up to 24 hours undercuts the speed and the pickup timing is unstated."
+        }
+      ]
+    },
+    {
+      "conversation_id": 97,
+      "overall": 3.67,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent created a warranty claim during the conversation and promised a replacement, which is a concrete action, but the resolution depends on the customer sending more information and nothing has shipped yet."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 4,
+          "reason": "The agent said the customer will get an email with a claim number, must reply with purchase date, serial number and issue description, and will receive a replacement in 5-7 business days after processing, though no deadline for the email was given."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The customer mentioned no deadline or high stakes, though this is a second faulty unit (a replacement), and the agent handled the request efficiently without needless delay but did not acknowledge the repeated problem or expedite."
+        }
+      ]
+    },
+    {
+      "conversation_id": 98,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 4,
+          "reason": "The agent said the unshipped order could be cancelled right away and the customer accepted, but the agent never confirmed the cancellation was completed and instead said it would be processed within 24 hours."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agent gave timelines (cancellation within 24 hours, refund 3-5 business days after) but did not mention a confirmation email or number or how the customer would be notified."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 5,
+          "reason": "The customer mentioned no deadline or high stakes, and the agent handled the cancellation promptly without needless delay."
+        }
+      ]
+    },
+    {
+      "conversation_id": 99,
+      "overall": 4.0,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 5,
+          "reason": "Mary processed the replacement request during the call and the customer does not need to return the damaged shirt, so a specific action resolved the problem."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 3,
+          "reason": "The agents gave a 3-5 business day shipping window, but never said how the customer would be notified (no confirmation number, tracking email or similar) and the customer had to be transferred and repeat their details."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 4,
+          "reason": "The customer expressed frustration but stated no deadline or high stake, and the agents handled the request promptly without needless delay, apart from a routine transfer and repeating of details."
+        }
+      ]
+    },
+    {
+      "conversation_id": 100,
+      "overall": 2.33,
+      "scores": [
+        {
+          "criterion": "Concrete resolution",
+          "score": 2,
+          "reason": "The agent could not speed up the order and only offered alternatives (store locator, an emailed list of partner stores), taking one small action by sending the email, while the customer still has no Sandwich Maker and must do the legwork."
+        },
+        {
+          "criterion": "Clear next steps",
+          "score": 2,
+          "reason": "The agent said an email with partner store contacts was being sent and pointed to the Store Locator, but gave no timeline, did not say what happens to the original order, and ended with a generic 'feel free to reach out'."
+        },
+        {
+          "criterion": "Responding to urgency",
+          "score": 3,
+          "reason": "The agent acknowledged the urgency and suggested alternatives such as local stores that could meet the deadline, but did not escalate, check on expediting the existing order, or offer cancellation or a refund to support the alternative purchase."
+        }
+      ]
+    }
+  ]
+}

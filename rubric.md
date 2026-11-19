@@ -1,25 +1,25 @@
 # Rubric: How well did the support agent handle this customer?
 
-## Politeness
+## Concrete resolution
 
-Is the agent courteous to the customer?
+Whether the agent took a specific action that solves the customer's problem, rather than only giving information or reassurance.
 
-- 1: The agent is rude, dismissive or sarcastic.
-- 3: The agent is neutral. It is not rude, but it skips a greeting, a thank-you or an apology where one was called for.
-- 5: The agent is courteous from the first message to the last.
+- 1: The agent only apologizes or repeats what the customer already knows, and nothing changes.
+- 3: The agent gives useful information or a partial fix, but the customer is left to wait or follow up on their own.
+- 5: The agent takes a specific action during the conversation, such as a replacement, refund, escalation or reshipment, that resolves the problem; or, if the customer only needed information, the agent gives complete and correct answers.
 
-## Name of your second criterion
+## Clear next steps
 
-One sentence saying what this criterion measures.
+Whether the customer ends the conversation knowing exactly what will happen next, who will do it and when.
 
-- 1: What the worst conversations look like on this criterion.
-- 3: What a middling conversation looks like.
-- 5: What the best conversations look like.
+- 1: The conversation ends with no next step, or only a vague one like "we'll do our best" or "contact us if it doesn't arrive."
+- 3: The agent states a next step but leaves out the timeline, what the customer needs to do, or how they will be notified.
+- 5: The agent spells out each next step with a timeline and how the customer will hear about it, such as a tracking email or a confirmation number.
 
-## Name of your third criterion
+## Responding to urgency
 
-One sentence saying what this criterion measures.
+Whether the agent changes what they do when the customer mentions a deadline, a high stake or a repeated problem.
 
-- 1: What the worst conversations look like on this criterion.
-- 3: What a middling conversation looks like.
-- 5: What the best conversations look like.
+- 1: The customer states a deadline or stake and the agent ignores it, handling the request exactly as if it were routine.
+- 3: The agent acknowledges the urgency in words but offers nothing faster or extra because of it.
+- 5: The agent acts on the urgency, for example by expediting, escalating or offering an alternative that meets the deadline; if the customer mentions no urgency, the agent handles the request without needless delay.
